@@ -2,27 +2,27 @@ import SocialIcons from "./SocialIcons";
 
 export default function Footer() {
   const footerSections = [
+    // {
+    //   title: "VENDER UMA CASA",
+    //   links: [
+    //     { text: "Solicitar uma oferta", href: "/contato" },
+    //     { text: "Avaliação gratuita", href: "/contato" },
+    //     { text: "Documentação", href: "#" },
+    //     { text: "Histórias de sucesso", href: "#" },
+    //   ],
+    // },
+    // {
+    //   title: "COMPRAR UMA CASA",
+    //   links: [
+    //     { text: "Buscar imóveis", href: "/imoveis" },
+    //     { text: "Financiamento", href: "#" },
+    //     { text: "Simulador", href: "#" },
+    //   ],
+    // },
     {
-      title: "VENDER UMA CASA",
+      title: "ALUGAR",
       links: [
-        { text: "Solicitar uma oferta", href: "/contato" },
-        { text: "Avaliação gratuita", href: "/contato" },
-        { text: "Documentação", href: "#" },
-        { text: "Histórias de sucesso", href: "#" },
-      ],
-    },
-    {
-      title: "COMPRAR UMA CASA",
-      links: [
-        { text: "Buscar imóveis", href: "/imoveis" },
-        { text: "Financiamento", href: "#" },
-        { text: "Simulador", href: "#" },
-      ],
-    },
-    {
-      title: "COMPRAR, ALUGAR E VENDER",
-      links: [
-        { text: "Comprar e vender propriedades", href: "/imoveis" },
+        // { text: "Comprar e vender propriedades", href: "/imoveis" },
         { text: "Alugar casa", href: "/imoveis" },
         { text: "Parcerias", href: "/contato" },
       ],
@@ -81,7 +81,7 @@ export default function Footer() {
               >
                 Somos especialistas em conectar pessoas aos seus lares ideais.
                 Com anos de experiência no mercado imobiliário, oferecemos
-                soluções completas para compra, venda e locação de imóveis.
+                soluções completas para locação de imóveis.
               </p>
             </div>
           </div>

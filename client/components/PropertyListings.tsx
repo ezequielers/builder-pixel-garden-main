@@ -7,7 +7,7 @@ export default function PropertyListings() {
       id: 1,
       image:
         "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&h=300&fit=crop",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Condomínio da Avenida Rockville",
       address: "8800 Rockville Ave, Greenville, NC 27834",
       price: "$300000",
@@ -20,7 +20,7 @@ export default function PropertyListings() {
       id: 2,
       image:
         "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=300&fit=crop",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Villa Escocesa de Ohio",
       address: "820 Ohio Road Scotch Plains, NJ 07076",
       price: "$600000",
@@ -33,7 +33,7 @@ export default function PropertyListings() {
       id: 3,
       image:
         "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Vila de Enxofre",
       address: "8214 Smoky Hollow St, Sulphur, LA 70663",
       price: "$350000",
@@ -46,7 +46,7 @@ export default function PropertyListings() {
       id: 4,
       image:
         "https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=400&h=300&fit=crop",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Apartamento na Avenida Pawnee",
       address: "9 Pawnee St, Bloomfield, NJ 07003",
       price: "$180000",
@@ -59,7 +59,7 @@ export default function PropertyListings() {
       id: 5,
       image:
         "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Apartamento na Avenida Oxford",
       address: "7 Maple Ave, Cary, NC 27511",
       price: "$150000",
@@ -72,7 +72,7 @@ export default function PropertyListings() {
       id: 6,
       image:
         "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400&h=300&fit=crop",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Apartamentos da Avenida Fremont",
       address: "123 Fremont Ave, Hamden, CT 06514",
       price: "$210000",
@@ -185,7 +185,7 @@ export default function PropertyListings() {
         </div>
 
         {/* View More Button */}
-        <div className="text-center">
+        <div className="text-center" style={{marginBottom: '80px'}}>
           <Link
             to="/imoveis"
             className="inline-block bg-homeflip-purple text-white px-6 py-3 rounded-lg font-medium font-inter text-sm transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"

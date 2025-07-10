@@ -10,7 +10,7 @@ export default function RelatedListings() {
       id: 7,
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/8b29cefa75611e0f0f971affde684dbaef91a844?width=832",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Apartamento em Piscataway",
       address: "19 North Road Piscataway, NJ 08854",
       price: "$142000",
@@ -23,7 +23,7 @@ export default function RelatedListings() {
       id: 8,
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/b7abc6330a3ca38420fbbd2c8bfb18f0eb8c3b55?width=832",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Apartamento da Rua Division",
       address: "506 Division Road Pembroke Pines, FL 33028",
       price: "$120000",
@@ -36,7 +36,7 @@ export default function RelatedListings() {
       id: 9,
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/71d03cf967510455a85c8f9c9e64a4f2fecb5d16?width=832",
-      status: "À venda",
+      status: "Para Alugar",
       title: "Apartamento Tanglewood",
       address: "8911 Tanglewood Ave. Capitol Heights, MD 20743",
       price: "$160000",

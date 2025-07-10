@@ -76,7 +76,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
           <div className="absolute top-4 sm:top-7 left-4 sm:left-5">
             <span
               style={{
-                background: "#8EDA53",
+                background: "#9653DA",
                 fontSize: "18px",
                 paddingTop: "8px",
                 paddingBottom: "8px",

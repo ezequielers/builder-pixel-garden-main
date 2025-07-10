@@ -4,10 +4,7 @@ export default function PropertiesHero() {
       {/* Enhanced Gradient Background */}
       <div
         className="absolute inset-0 w-full h-full"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(224, 222, 247, 0.3) 0%, rgba(224, 222, 247, 0.00) 100%)",
-        }}
+
       />
 
       {/* Content Container */}
@@ -22,15 +19,23 @@ export default function PropertiesHero() {
             }}
           >
             {/* Hero Text Content */}
-            <div className="absolute left-4 sm:left-8 lg:left-[110px] top-[30px] sm:top-[40px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
-              <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg">
-                {/* Main Headline */}
-                <h1 className="text-white font-gantari text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                  Encontre uma casa que combine com seu estilo de vida.
+            <div className="absolute left-4 sm:left-8 lg:left-[180px] top-[30px] sm:top-[40px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
+              <div
+                style={{ maxWidth: '100%' }}
+                className="flex flex-col items-center gap-3 sm:gap-4 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg"
+              >
+                <h1
+                  style={{ fontSize: '60px', lineHeight: '55px' }}
+                  className="text-white font-gantari font-bold leading-tight text-center"
+                >
+                  Encontre uma casa que combine
+                  <br />
+                  <span className="block">
+                    com seu estilo de vida.
+                  </span>
                 </h1>
 
-                {/* Description */}
-                <p className="text-white font-inter text-sm md:text-base font-normal leading-relaxed max-w-md">
+                <p className="w-full max-w-[765px] text-white font-inter text-sm md:text-base font-normal leading-relaxed text-center">
                   Lorem ipsum dolor sit amet consectetur. Nec risus quis viverra
                   libero tellus eget. Leo morbi faucibus mattis pharetra tellus
                   velit ultricies duis rhoncus. Porttitor fermentum eu urna eget
@@ -38,10 +43,11 @@ export default function PropertiesHero() {
               </div>
             </div>
 
+
             {/* Search Controls Section */}
-            <div className="absolute left-4 md:left-[110px] bottom-4 md:bottom-[120px] right-4 md:right-auto md:w-[1076px]">
+            <div className="absolute left-4 md:left-[60px] bottom-4 md:bottom-[-60px] right-4 md:right-auto md:w-[1076px]">
               {/* Search Control Bar */}
-              <div className="flex flex-col md:flex-row gap-3 mb-4 md:mb-[72px]">
+              <div className="flex flex-col md:flex-row gap-3 mb-4 md:mb-[20px]">
                 {/* Alugar Button (Single Option) */}
                 <div className="inline-flex p-2 pl-4 md:pl-8 justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
                   <div className="w-full md:w-[250px] h-12 relative group">
@@ -206,7 +212,7 @@ export default function PropertiesHero() {
                 </svg>
 
                 {/* Enhanced Search Button */}
-                <button className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-[0px_8px_25px_0px_rgba(94,17,119,0.4)] hover:scale-105 active:scale-95 group">
+                <button style={{background: '#5245ED'}} className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-[0px_8px_25px_0px_rgba(94,17,119,0.4)] hover:scale-105 active:scale-95 group">
                   <svg
                     width="24"
                     height="24"

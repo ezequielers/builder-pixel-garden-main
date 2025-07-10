@@ -23,7 +23,7 @@ export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
   // Mock property data based on Figma design
   const mockProperty = {
     id: parseInt(id || "1"),
-    status: "À venda",
+    status: "Para Alugar",
     title: "Incrível apartamento moderno",
     address: "43 W. Wellington Road Fairhope, AL 36532",
     price: "$120.000",
