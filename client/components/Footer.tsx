@@ -39,7 +39,7 @@ export default function Footer() {
       title: "SOBRE",
       links: [
         { text: "Nossa empresa", href: "/sobre" },
-        { text: "Como funciona", href: "/sobre" },
+        { text: "Como funciona", href: "/como-funciona" },
         { text: "Contato", href: "/contato" },
         { text: "Parceiros", href: "#" },
       ],

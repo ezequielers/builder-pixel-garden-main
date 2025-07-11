@@ -97,20 +97,20 @@ export default function PropertyListings() {
         </div>
 
         {/* Search Tabs */}
-        <div className="flex flex-col lg:flex-row gap-4 mb-12">
+        <div className="flex flex-col lg:flex-row gap-4 mb-8 sm:mb-12">
           {/* Tab Buttons */}
           <div className="lg:flex-1">
-            <div className="inline-flex p-2  justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
-              <div className="w-full md:w-[250px] h-12 relative group">
-                <div className="w-full md:w-[250px] h-12 rounded-md border-2 border-[#E0DEF7] bg-white shadow-[0px_8px_50px_0px_rgba(14,8,84,0.15)] absolute transition-all duration-300 group-hover:shadow-[0px_12px_60px_0px_rgba(14,8,84,0.25)]" />
-                <div className="flex items-center gap-3 absolute left-4 md:left-[77px] top-[11px]">
+            <div className="inline-flex p-2 justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg w-full sm:w-auto">
+              <div className="w-full sm:w-[200px] md:w-[250px] h-12 relative group">
+                <div className="w-full sm:w-[200px] md:w-[250px] h-12 rounded-md border-2 border-[#E0DEF7] bg-white shadow-[0px_8px_50px_0px_rgba(14,8,84,0.15)] absolute transition-all duration-300 group-hover:shadow-[0px_12px_60px_0px_rgba(14,8,84,0.25)]" />
+                <div className="flex items-center gap-2 sm:gap-3 absolute left-4 sm:left-6 md:left-[77px] top-[11px] right-4">
                   <svg
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="transition-transform duration-200 group-hover:scale-110"
+                    className="transition-transform duration-200 group-hover:scale-110 flex-shrink-0"
                   >
                     <path
                       d="M16.4917 12.4416C14.775 14.1499 12.3167 14.6749 10.1584 13.9999L6.23337 17.9166C5.95004 18.2083 5.39171 18.3833 4.99171 18.3249L3.17504 18.0749C2.57504 17.9916 2.01671 17.4249 1.92504 16.8249L1.67504 15.0083C1.61671 14.6083 1.80837 14.0499 2.08337 13.7666L6.00004 9.84994C5.33337 7.68327 5.85004 5.22494 7.56671 3.5166C10.025 1.05827 14.0167 1.05827 16.4834 3.5166C18.95 5.97494 18.95 9.98327 16.4917 12.4416Z"
@@ -136,7 +136,7 @@ export default function PropertyListings() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-[#3A2A72] font-telegraf text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#2A1A5F]">
+                  <span className="text-[#3A2A72] font-telegraf text-base sm:text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#2A1A5F] truncate">
                     Alugar
                   </span>
                 </div>
@@ -146,14 +146,14 @@ export default function PropertyListings() {
 
           {/* Search Input */}
           <div className="w-full md:w-[352px] h-16 rounded-lg border-2 border-[#E0DEF7] bg-[#F7F7FD] relative group shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:border-[#7065F0]">
-            <div className="flex items-center gap-4 absolute left-4 md:left-6 top-5">
+            <div className="flex items-center gap-3 sm:gap-4 absolute left-4 sm:left-6 top-5 right-4">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="transition-all duration-200 group-hover:scale-105"
+                className="transition-all duration-200 group-hover:scale-105 flex-shrink-0"
               >
                 <path
                   d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
@@ -170,7 +170,7 @@ export default function PropertyListings() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="text-[#000929] font-source-code-pro text-base font-normal leading-[150%] opacity-50 transition-opacity duration-200 group-hover:opacity-70">
+              <span className="text-[#000929] font-source-code-pro text-sm sm:text-base font-normal leading-[150%] opacity-50 transition-opacity duration-200 group-hover:opacity-70 truncate">
                 Pesquisar Imóvel
               </span>
             </div>
@@ -178,7 +178,7 @@ export default function PropertyListings() {
         </div>
 
         {/* Property Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {properties.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}

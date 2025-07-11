@@ -205,14 +205,23 @@ export default function RelatedListings() {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-green-500 text-white px-4 py-2 rounded-md text-sm font-medium font-inter">
+                      <span                   
+                        style={{
+                          background: "#9653DA",
+                          fontSize: "18px",
+                          paddingTop: "8px",
+                          paddingBottom: "8px",
+                          paddingLeft: "30px",
+                          paddingRight: "30px",
+                        }}
+                      className="text-white px-4 py-2 rounded-md text-sm font-medium font-inter">
                         {property.status}
                       </span>
                     </div>
                   </div>
 
                   {/* Property Info */}
-                  <div className="p-6">
+                  <div className="p-6" style={{minHeight:'320px' }}>
                     {/* Title and Address */}
                     <div className="mb-5">
                       <h3 className="text-lg md:text-xl font-bold text-gray-900 font-gantari mb-3 group-hover:text-homeflip-purple transition-colors duration-300">

@@ -28,10 +28,7 @@ export default function Hero() {
             <div className="absolute left-4 sm:left-8 lg:left-[72px] top-[30px] sm:top-[40px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
               <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg">
                 {/* Main Headline */}
-                <h1
-                  className="text-white font-telegraf text-xl md:text-3xl lg:text-4xl font-bold leading-tight"
-                  style={{ fontSize: "60px", lineHeight: "50px" }}
-                >
+                <h1 className="text-white font-telegraf text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
                   Encontre o imóvel perfeito para seu estilo de vida!
                 </h1>
 

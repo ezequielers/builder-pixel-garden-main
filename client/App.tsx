@@ -23,6 +23,8 @@ import GestaoFinanceira from "./pages/GestaoFinanceira";
 import Proposta from "./pages/Proposta";
 import PropostaExpressa from "./pages/PropostaExpressa";
 import AnaliseInteligente from "./pages/AnaliseInteligente";
+import AgendarVisita from "./pages/AgendarVisita";
+import ComoFunciona from "./pages/ComoFunciona";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -66,6 +68,8 @@ const App = () => (
           <Route path="/proposta" element={<Proposta />} />
           <Route path="/proposta-expressa" element={<PropostaExpressa />} />
           <Route path="/analise-inteligente" element={<AnaliseInteligente />} />
+          <Route path="/agendar-visita" element={<AgendarVisita />} />
+          <Route path="/como-funciona" element={<ComoFunciona />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

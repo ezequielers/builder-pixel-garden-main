@@ -128,12 +128,23 @@ export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
   return (
     <div className="w-full bg-gray-50 py-6 md:py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header com informações principais */}
-        <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge className="bg-green-100 text-green-700 hover:bg-green-100">
+        {/* Header Section */}
+        <div className="flex flex-col gap-4 md:gap-6 mb-6 md:mb-8 lg:mb-12">
+          {/* Status Badge and Price Row */}
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 md:gap-6">
+            <div className="flex flex-col gap-3 md:gap-4">
+              {/* Status Badge */}
+              <div className="inline-flex w-fit">
+                <Badge               
+                  style={{
+                    background: "#9653DA",
+                    fontSize: "18px",
+                    paddingTop: "8px",
+                    paddingBottom: "8px",
+                    paddingLeft: "30px",
+                    paddingRight: "30px",
+                  }}
+               className=" text-white px-3 md:px-4 lg:px-5 py-1.5 md:py-2 rounded-md text-xs md:text-sm font-medium font-gantari">
                   {currentProperty.status}
                 </Badge>
                 <Badge

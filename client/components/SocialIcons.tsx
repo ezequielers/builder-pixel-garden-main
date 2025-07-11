@@ -27,8 +27,10 @@ export default function SocialIcons({ className = "" }: SocialIconsProps) {
 
       {/* Instagram */}
       <a
-        href="#"
-        aria-label="Instagram"
+        href="https://www.instagram.com/homeflipbr/"
+        aria-label="Instagram @homeflipbr"
+        target="_blank"
+        rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity"
       >
         <svg

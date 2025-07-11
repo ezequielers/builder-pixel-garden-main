@@ -35,16 +35,16 @@ export default function Header({ showGradient }: HeaderProps) {
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Primeira linha do cabeçalho */}
-        <div className="h-12 flex justify-end items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-4">
+        <div className="h-12 flex justify-end items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-2 sm:gap-4">
           {/* Fale com um especialista button */}
-          <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 font-telegraf text-sm font-medium">
+          <button className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 font-telegraf text-xs sm:text-sm font-medium whitespace-nowrap">
             <svg
               width="16"
               height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4"
+              className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
             >
               <path
                 d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.352 21.4019C21.1468 21.5901 20.9045 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.19 12.85C3.49997 10.2412 2.44824 7.271 2.12 4.18C2.09543 3.90347 2.12825 3.62476 2.21692 3.36162C2.30559 3.09849 2.44701 2.85669 2.63348 2.65162C2.81996 2.44655 3.04712 2.28271 3.30849 2.17052C3.56986 2.05833 3.84577 2.00026 4.125 2H7.125C7.60445 1.99574 8.06826 2.16736 8.43204 2.48298C8.79583 2.7986 9.03555 3.23426 9.105 3.71C9.23661 4.66 9.47145 5.59353 9.805 6.49C9.94601 6.84857 9.97529 7.2395 9.88951 7.61244C9.80372 7.98537 9.60689 8.32305 9.325 8.58L8.055 9.85C9.4785 12.3533 11.5467 14.4215 14.05 15.845L15.32 14.575C15.5769 14.2931 15.9146 14.0963 16.2876 14.0105C16.6605 13.9247 17.0514 13.954 17.41 14.095C18.3065 14.4286 19.24 14.6634 20.19 14.795C20.6698 14.8651 21.1088 15.1063 21.4248 15.4723C21.7408 15.8383 21.9105 16.3041 21.905 16.785L22 16.92Z"
@@ -54,7 +54,8 @@ export default function Header({ showGradient }: HeaderProps) {
                 strokeLinejoin="round"
               />
             </svg>
-            Fale com um especialista
+            <span className="hidden sm:inline">Fale com um especialista</span>
+            <span className="sm:hidden">Contato</span>
           </button>
 
           {/* Login Button */}
