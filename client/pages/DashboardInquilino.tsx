@@ -146,9 +146,17 @@ export default function DashboardInquilino() {
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Settings className="w-4 h-4 mr-2" />
-                  Configurações
+                <DropdownMenuItem asChild>
+                  <Link to="/dashboard-inquilino/contratos">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Meu Contrato
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/dashboard-inquilino/configuracoes">
+                    <Settings className="w-4 h-4 mr-2" />
+                    Configurações
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleLogout}>
@@ -264,9 +272,11 @@ export default function DashboardInquilino() {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button variant="outline" className="flex-1">
-                      <FileText className="w-4 h-4 mr-2" />
-                      Ver Contrato
+                    <Button variant="outline" className="flex-1" asChild>
+                      <Link to="/dashboard-inquilino/contratos">
+                        <FileText className="w-4 h-4 mr-2" />
+                        Ver Contrato
+                      </Link>
                     </Button>
                     <Button variant="outline" className="flex-1">
                       <Phone className="w-4 h-4 mr-2" />
@@ -352,13 +362,39 @@ export default function DashboardInquilino() {
                     Buscar Imóveis
                   </Link>
                 </Button>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  asChild
+                >
+                  <Link to="/dashboard-inquilino/pagamentos">
+                    <DollarSign className="w-4 h-4 mr-2" />
+                    Histórico de Pagamentos
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  asChild
+                >
+                  <Link to="/dashboard-inquilino/contratos">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Meu Contrato
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  asChild
+                >
+                  <Link to="/dashboard-inquilino/manutencoes">
+                    <Settings className="w-4 h-4 mr-2" />
+                    Solicitar Reparo
+                  </Link>
+                </Button>
                 <Button variant="outline" className="w-full justify-start">
                   <Calendar className="w-4 h-4 mr-2" />
                   Agendar Visita
-                </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <FileText className="w-4 h-4 mr-2" />
-                  Solicitar Reparo
                 </Button>
               </CardContent>
             </Card>

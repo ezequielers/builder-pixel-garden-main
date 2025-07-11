@@ -37,6 +37,13 @@ interface PropostaForm {
   isNegativado: boolean;
 }
 
+interface TaxasCalculadas {
+  taxaInquilino: number; // Garantia locatícia
+  taxaPlataforma: number; // Taxa da plataforma
+  taxaProprietario: number; // Taxa de serviço pro proprietário
+  totalTaxas: number;
+}
+
 export default function PropostaExpressa() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -51,6 +58,33 @@ export default function PropostaExpressa() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Função para calcular as taxas
+  const calcularTaxas = (valorOfertado: string): TaxasCalculadas => {
+    const valor =
+      parseFloat(valorOfertado.replace(/[^\d,]/g, "").replace(",", ".")) || 0;
+
+    const taxaInquilino = valor * 0.3; // 30% do aluguel (garantia locatícia)
+    const taxaPlataforma = valor * 0.05; // 5% do aluguel (taxa da plataforma)
+    const taxaProprietario = valor * 0.08; // 8% do aluguel (taxa de serviço)
+    const totalTaxas = taxaInquilino + taxaPlataforma + taxaProprietario;
+
+    return {
+      taxaInquilino,
+      taxaPlataforma,
+      taxaProprietario,
+      totalTaxas,
+    };
+  };
+
+  const taxas = calcularTaxas(form.valorOfertado);
+
+  const formatCurrency = (value: number) => {
+    return new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(value);
+  };
 
   // Mock property data
   const mockProperty = {
@@ -184,6 +218,68 @@ export default function PropostaExpressa() {
                         Digite o valor que deseja propor para o aluguel
                       </p>
                     </div>
+
+                    {/* Seção de Taxas */}
+                    {form.valorOfertado && (
+                      <div className="space-y-4 p-4 bg-gray-50 rounded-lg border">
+                        <h4 className="font-semibold text-gray-900 flex items-center gap-2">
+                          <DollarSign className="w-4 h-4" />
+                          Taxas e Valores Adicionais
+                        </h4>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                          <div className="space-y-1">
+                            <p className="text-gray-600">
+                              Taxa Inquilino (Garantia Locatícia)
+                            </p>
+                            <p className="font-semibold text-homeflip-purple">
+                              {formatCurrency(taxas.taxaInquilino)}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              30% do valor do aluguel
+                            </p>
+                          </div>
+
+                          <div className="space-y-1">
+                            <p className="text-gray-600">Taxa de Plataforma</p>
+                            <p className="font-semibold text-homeflip-violet">
+                              {formatCurrency(taxas.taxaPlataforma)}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              5% do valor do aluguel
+                            </p>
+                          </div>
+
+                          <div className="space-y-1">
+                            <p className="text-gray-600">
+                              Taxa de Serviço (Proprietário)
+                            </p>
+                            <p className="font-semibold text-homeflip-navy">
+                              {formatCurrency(taxas.taxaProprietario)}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              8% do valor do aluguel
+                            </p>
+                          </div>
+                        </div>
+
+                        <Separator />
+
+                        <div className="flex justify-between items-center font-semibold text-lg">
+                          <span className="text-gray-900">Total de Taxas:</span>
+                          <span className="text-homeflip-purple">
+                            {formatCurrency(taxas.totalTaxas)}
+                          </span>
+                        </div>
+
+                        <p className="text-xs text-gray-600 bg-blue-50 p-2 rounded">
+                          <strong>Nota:</strong> As taxas são cobradas uma única
+                          vez no início do contrato. A taxa do inquilino
+                          (garantia locatícia) substitui a necessidade de fiador
+                          ou depósito caução.
+                        </p>
+                      </div>
+                    )}
 
                     {/* Data de entrada */}
                     <div className="space-y-2">

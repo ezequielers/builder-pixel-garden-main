@@ -37,6 +37,10 @@ import AdminAnalises from "./pages/AdminAnalises";
 import AdminManutencoes from "./pages/AdminManutencoes";
 import InquilinoHistoricoPagamentos from "./pages/InquilinoHistoricoPagamentos";
 import InquilinoManutencoes from "./pages/InquilinoManutencoes";
+import ProprietarioContratos from "./pages/ProprietarioContratos";
+import InquilinoContratos from "./pages/InquilinoContratos";
+import ProprietarioConfiguracoes from "./pages/ProprietarioConfiguracoes";
+import InquilinoConfiguracoes from "./pages/InquilinoConfiguracoes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -77,6 +81,14 @@ const App = () => (
             path="/dashboard-proprietario/financeiro"
             element={<GestaoFinanceira />}
           />
+          <Route
+            path="/dashboard-proprietario/contratos"
+            element={<ProprietarioContratos />}
+          />
+          <Route
+            path="/dashboard-proprietario/configuracoes"
+            element={<ProprietarioConfiguracoes />}
+          />
           <Route path="/dashboard-inquilino" element={<DashboardInquilino />} />
           <Route
             path="/dashboard-inquilino/pagamentos"
@@ -85,6 +97,14 @@ const App = () => (
           <Route
             path="/dashboard-inquilino/manutencoes"
             element={<InquilinoManutencoes />}
+          />
+          <Route
+            path="/dashboard-inquilino/contratos"
+            element={<InquilinoContratos />}
+          />
+          <Route
+            path="/dashboard-inquilino/configuracoes"
+            element={<InquilinoConfiguracoes />}
           />
           <Route path="/proposta" element={<Proposta />} />
           <Route path="/proposta-expressa" element={<PropostaExpressa />} />
