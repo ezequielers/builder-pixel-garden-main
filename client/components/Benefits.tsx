@@ -10,7 +10,7 @@ export default function Benefits() {
           className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
-      title: "Seguro de Propriedade",
+      title: "Seguro de propriedade",
       description:
         "Imóveis segurados, com cobertura de responsabilidade civil para uma vida melhor.",
     },
@@ -22,7 +22,7 @@ export default function Benefits() {
           className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
-      title: "Melhor Preço",
+      title: "Melhor preço",
       description:
         "Não se preocupe com preço. Cadastre seu imóvel e deixe que nós fazemos as contas por você.",
     },
@@ -34,7 +34,7 @@ export default function Benefits() {
           className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
-      title: "Comissão Mais Baixa",
+      title: "Comissão mais baixa",
       description:
         "Você não precisa mais negociar comissões; aqui custa apenas 2%.",
     },
@@ -46,7 +46,7 @@ export default function Benefits() {
           className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
-      title: "Controle Total",
+      title: "Controle total",
       description:
         "Faça um tour virtual e agende visitas antes de alugar ou comprar. Você tem controle total.",
     },

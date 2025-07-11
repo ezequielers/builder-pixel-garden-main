@@ -48,21 +48,21 @@ export default function Hero() {
         <div className="flex flex-col items-center">
           {/* Hero Image and Text Section */}
           <div
-            className="w-full h-[700px] sm:h-[800px] md:h-[850px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
+            className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[600px] xl:h-[650px] rounded-t-lg md:rounded-t-xl relative"
             style={{
-              background: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('https://cdn.builder.io/api/v1/image/assets/TEMP/083e6f86a30d3717f17cc5dcf1c69d289b5aabe3?width=2592') center/cover no-repeat`,
+              background: `linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.15) 100%), url('https://cdn.builder.io/api/v1/image/assets/TEMP/083e6f86a30d3717f17cc5dcf1c69d289b5aabe3?width=2592') center/cover no-repeat`,
             }}
           >
             {/* Hero Text Content */}
-            <div className="absolute left-4 sm:left-8 lg:left-[72px] top-[40px] sm:top-[60px] md:top-[80px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
-              <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <div className="absolute left-4 sm:left-6 md:left-8 lg:left-[72px] top-8 sm:top-12 md:top-16 lg:top-20 xl:top-[141px] right-4 sm:right-6 md:right-8 lg:right-auto">
+              <div className="flex flex-col items-start gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
                 {/* Main Headline */}
-                <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight">
+                <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-[1.2] sm:leading-tight md:leading-tight lg:leading-tight">
                   Encontre o imóvel perfeito para seu estilo de vida!
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-white/90 font-montserrat text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-lg">
+                <p className="text-white/95 font-montserrat text-xs sm:text-sm md:text-base lg:text-lg font-light leading-[1.4] sm:leading-relaxed max-w-[260px] sm:max-w-sm md:max-w-md lg:max-w-lg">
                   Mais que um imóvel. Um lugar para chamar de seu lar. Seu
                   estilo de vida merece o imóvel certo. Descubra com a gente.
                 </p>
@@ -70,9 +70,9 @@ export default function Hero() {
             </div>
 
             {/* Search Controls Section */}
-            <div className="absolute left-4 md:left-[72px] bottom-6 md:bottom-8 lg:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px] z-10">
+            <div className="absolute left-4 sm:left-6 md:left-8 lg:left-[72px] bottom-4 sm:bottom-6 md:bottom-8 lg:top-[400px] xl:top-[450px] right-4 sm:right-6 md:right-8 lg:right-auto lg:w-[860px] xl:w-[1076px] z-10">
               {/* Enhanced Search Form */}
-              <div className="flex flex-col lg:flex-row w-full h-auto p-4 sm:p-6 lg:p-8 xl:p-10 items-start lg:items-center gap-4 sm:gap-6 lg:gap-4 xl:gap-3 rounded-xl bg-white shadow-[0px_8px_40px_0px_rgba(0,0,0,0.20)] backdrop-blur-lg transition-all duration-300 hover:shadow-[0px_12px_50px_0px_rgba(0,0,0,0.25)] border border-white/20 relative">
+              <div className="flex flex-col lg:flex-row w-full h-auto p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10 items-start lg:items-center gap-3 sm:gap-4 md:gap-5 lg:gap-4 xl:gap-3 rounded-lg sm:rounded-xl bg-white shadow-[0px_8px_40px_0px_rgba(0,0,0,0.20)] backdrop-blur-lg transition-all duration-300 hover:shadow-[0px_12px_50px_0px_rgba(0,0,0,0.25)] border border-white/20 relative">
                 {/* Categoria Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
                   <Select
@@ -81,7 +81,7 @@ export default function Hero() {
                       setFilters({ ...filters, category: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[56px] px-4 bg-[#F6F6F6] border-none font-montserrat text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
+                    <SelectTrigger className="h-10 sm:h-12 md:h-[56px] px-3 sm:px-4 bg-[#F6F6F6] border-none font-montserrat text-sm sm:text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Categoria" />
                     </SelectTrigger>
                     <SelectContent
@@ -104,7 +104,7 @@ export default function Hero() {
                       setFilters({ ...filters, propertyType: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[56px] px-4 bg-[#F6F6F6] border-none font-montserrat text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
+                    <SelectTrigger className="h-10 sm:h-12 md:h-[56px] px-3 sm:px-4 bg-[#F6F6F6] border-none font-montserrat text-sm sm:text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Tipo de imóvel" />
                     </SelectTrigger>
                     <SelectContent
@@ -129,7 +129,7 @@ export default function Hero() {
                       setFilters({ ...filters, location: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[56px] px-4 bg-[#F6F6F6] border-none font-montserrat text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
+                    <SelectTrigger className="h-10 sm:h-12 md:h-[56px] px-3 sm:px-4 bg-[#F6F6F6] border-none font-montserrat text-sm sm:text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Localização" />
                     </SelectTrigger>
                     <SelectContent
@@ -168,7 +168,7 @@ export default function Hero() {
                 {/* Enhanced Search Button */}
                 <button
                   onClick={handleSearch}
-                  className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-homeflip-purple/90 hover:shadow-[0px_8px_25px_0px_rgba(74,13,95,0.4)] hover:scale-105 active:scale-95 group"
+                  className="flex w-full lg:w-[160px] h-10 sm:h-12 md:h-[50px] px-4 sm:px-5 py-2 justify-center items-center gap-2 sm:gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-homeflip-purple/90 hover:shadow-[0px_8px_25px_0px_rgba(74,13,95,0.4)] hover:scale-105 active:scale-95 group"
                 >
                   <svg
                     width="24"
@@ -193,7 +193,7 @@ export default function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-white text-base sm:text-lg font-normal leading-5 transition-all duration-200 group-hover:font-semibold">
+                  <span className="text-white text-sm sm:text-base md:text-lg font-normal leading-5 transition-all duration-200 group-hover:font-semibold">
                     Buscar
                   </span>
                 </button>
