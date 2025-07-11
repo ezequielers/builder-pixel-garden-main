@@ -11,9 +11,10 @@ interface NavigationProps {
 }
 
 export default function Navigation({ className = "" }: NavigationProps) {
-  const baseClasses = className.includes("flex-col")
+  const isMobileLayout = className.includes("flex-col");
+  const baseClasses = isMobileLayout
     ? `flex items-start ${className}`
-    : `hidden md:flex items-center gap-6 ${className}`;
+    : `hidden lg:flex items-center gap-4 md:gap-6 ${className}`;
 
   return (
     <nav className={baseClasses}>
@@ -21,7 +22,11 @@ export default function Navigation({ className = "" }: NavigationProps) {
         <Link
           key={item.name}
           to={item.href}
-          className="text-black font-gantari text-base font-normal hover:text-gray-600 transition-colors"
+          className={`font-gantari font-normal hover:text-gray-600 transition-colors ${
+            isMobileLayout
+              ? "text-gray-900 text-lg py-3 px-4 rounded-lg hover:bg-gray-50 w-full block"
+              : "text-black text-sm md:text-base"
+          }`}
         >
           {item.name}
         </Link>

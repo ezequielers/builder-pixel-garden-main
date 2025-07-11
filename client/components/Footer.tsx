@@ -76,7 +76,7 @@ export default function Footer() {
               </p>
 
               <div className="text-white/70 text-xs md:text-sm leading-relaxed space-y-1">
-                <p className="font-medium">HomeFlip Imóveis</p>
+                <p className="font-medium">HomeFlip</p>
                 <p>Avenida João Gualberto 1342</p>
                 <p>Sala 505 Andar 05</p>
                 <p>Cond Urban Office e Hotel</p>

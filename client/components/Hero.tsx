@@ -19,16 +19,16 @@ export default function Hero() {
         <div className="flex flex-col items-center">
           {/* Hero Image and Text Section */}
           <div
-            className="w-full h-[900px] sm:h-[900px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
+            className="w-full h-[700px] sm:h-[800px] md:h-[850px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
             style={{
               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('https://cdn.builder.io/api/v1/image/assets/TEMP/083e6f86a30d3717f17cc5dcf1c69d289b5aabe3?width=2592') center/cover no-repeat`,
             }}
           >
             {/* Hero Text Content */}
-            <div className="absolute left-4 sm:left-8 lg:left-[72px] top-[30px] sm:top-[40px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
-              <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg">
+            <div className="absolute left-4 sm:left-8 lg:left-[72px] top-[40px] sm:top-[60px] md:top-[80px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
+              <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                 {/* Main Headline */}
-                <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+                <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight">
                   Encontre o imóvel perfeito para seu estilo de vida!
                 </h1>
 
@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
 
             {/* Search Controls Section */}
-            <div className="absolute left-4 md:left-[72px] bottom-4 md:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px]">
+            <div className="absolute left-4 md:left-[72px] bottom-6 md:bottom-8 lg:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px]">
               {/* Search Control Bar */}
               <div
                 className="flex flex-col md:flex-row gap-3 mb-4"

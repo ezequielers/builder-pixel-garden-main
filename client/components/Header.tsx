@@ -37,7 +37,12 @@ export default function Header({ showGradient }: HeaderProps) {
         {/* Primeira linha do cabeçalho */}
         <div className="h-12 flex justify-end items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-2 sm:gap-4">
           {/* Fale com um especialista button */}
-          <button className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 text-xs sm:text-sm font-medium whitespace-nowrap shadow-lg hover:shadow-xl">
+          <a
+            href="https://wa.me/5541987409945?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20HomeFlip"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 text-xs sm:text-sm font-medium whitespace-nowrap shadow-lg hover:shadow-xl"
+          >
             <svg
               width="16"
               height="16"
@@ -55,8 +60,8 @@ export default function Header({ showGradient }: HeaderProps) {
               />
             </svg>
             <span className="hidden sm:inline">Fale com um especialista</span>
-            <span className="sm:hidden">Contato</span>
-          </button>
+            <span className="sm:hidden">WhatsApp</span>
+          </a>
 
           {/* Login Button */}
           <a
@@ -226,7 +231,12 @@ export default function Header({ showGradient }: HeaderProps) {
 
           {/* Mobile Actions */}
           <div className="px-4 py-6 border-t border-gray-200 space-y-3">
-            <button className="flex items-center gap-3 px-4 py-3 rounded-xl w-full bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 shadow-lg hover:shadow-xl">
+            <a
+              href="https://wa.me/5541987409945?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20HomeFlip"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-4 py-3 rounded-xl w-full bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 shadow-lg hover:shadow-xl"
+            >
               <svg
                 width="16"
                 height="16"
@@ -246,7 +256,7 @@ export default function Header({ showGradient }: HeaderProps) {
               <span className="text-base font-medium">
                 Fale com um especialista
               </span>
-            </button>
+            </a>
 
             <a
               href="/login"

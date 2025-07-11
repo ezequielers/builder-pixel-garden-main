@@ -141,10 +141,10 @@ export default function Contato() {
                         Fale diretamente conosco
                       </p>
                       <a
-                        href="tel:+5511999999999"
+                        href="tel:+554198740-9945"
                         className="text-homeflip-purple hover:text-homeflip-purple/80 font-semibold"
                       >
-                        (11) 99999-9999
+                        (41) 98740-9945
                       </a>
                     </div>
                   </div>
@@ -332,7 +332,7 @@ export default function Contato() {
                           onChange={(e) =>
                             handleInputChange("telefone", e.target.value)
                           }
-                          placeholder="(11) 99999-9999"
+                          placeholder="(41) 98740-9945"
                           className="h-12"
                           required
                         />
@@ -406,7 +406,7 @@ export default function Contato() {
                   <h3 className="font-bold text-lg mb-4">
                     Precisa de ajuda imediata?
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex justify-center">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-homeflip-purple/10 rounded-lg">
                         <MessageCircle className="w-5 h-5 text-homeflip-purple" />
@@ -415,17 +415,6 @@ export default function Contato() {
                         <p className="font-semibold">Chat online</p>
                         <p className="text-sm text-gray-600 font-light">
                           Disponível 24/7
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-homeflip-purple/10 rounded-lg">
-                        <Phone className="w-5 h-5 text-homeflip-purple" />
-                      </div>
-                      <div>
-                        <p className="font-semibold">Ligação gratuita</p>
-                        <p className="text-sm text-gray-600 font-light">
-                          0800 123 4567
                         </p>
                       </div>
                     </div>
