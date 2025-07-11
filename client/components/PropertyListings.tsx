@@ -88,10 +88,10 @@ export default function PropertyListings() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 font-telegraf mb-3">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
             Com base na sua localização
           </h2>
-          <p className="text-gray-600 font-source-code-pro text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-gray-600 font-light text-sm md:text-base max-w-2xl mx-auto">
             Algumas das propriedades selecionadas perto de você.
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function PropertyListings() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-[#3A2A72] font-telegraf text-base sm:text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#2A1A5F] truncate">
+                  <span className="text-[#3A2A72] text-base sm:text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#2A1A5F] truncate">
                     Alugar
                   </span>
                 </div>
@@ -188,7 +188,7 @@ export default function PropertyListings() {
         <div className="text-center" style={{ marginBottom: "80px" }}>
           <Link
             to="/imoveis"
-            className="inline-block bg-homeflip-purple text-white px-6 py-3 rounded-lg font-medium font-source-code-pro text-sm transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"
+            className="inline-block bg-homeflip-purple text-white px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"
           >
             Ver mais imóveis
           </Link>

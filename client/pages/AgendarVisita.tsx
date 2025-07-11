@@ -114,24 +114,24 @@ export default function AgendarVisita() {
               </p>
             </div>
 
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-green-50 border-green-300 shadow-lg">
               <CardContent className="pt-6">
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-blue-600" />
+                    <Calendar className="w-4 h-4 text-green-600" />
                     <span>Data: {form.dataPreferida}</span>
                   </div>
                   {form.horarioPreferido && (
                     <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-blue-600" />
+                      <Clock className="w-4 h-4 text-green-600" />
                       <span>Horário: {form.horarioPreferido}</span>
                     </div>
                   )}
                   <div className="flex items-center gap-2">
                     {tipoVisita === "video" ? (
-                      <Video className="w-4 h-4 text-blue-600" />
+                      <Video className="w-4 h-4 text-green-600" />
                     ) : (
-                      <MapPin className="w-4 h-4 text-blue-600" />
+                      <MapPin className="w-4 h-4 text-green-600" />
                     )}
                     <span>
                       Tipo:{" "}
@@ -195,7 +195,7 @@ export default function AgendarVisita() {
                   : "Visita Presencial"}
               </h1>
             </div>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto mb-4">
               {tipoVisita === "video"
                 ? "Conheça o imóvel através de uma visita guiada por vídeo, no conforto da sua casa."
                 : "Agende uma visita presencial para conhecer o imóvel pessoalmente."}
@@ -345,7 +345,7 @@ export default function AgendarVisita() {
               <Button
                 type="submit"
                 disabled={isSubmitting || !isFormValid()}
-                className="bg-homeflip-purple hover:bg-homeflip-purple/90 px-8"
+                className="bg-homeflip-purple hover:bg-[#4A0D5F] px-8 shadow-lg hover:shadow-xl"
                 size="lg"
               >
                 {isSubmitting ? (
@@ -364,24 +364,24 @@ export default function AgendarVisita() {
           </form>
 
           {/* Informações importantes */}
-          <Card className="mt-8 bg-blue-50 border-blue-200">
+          <Card className="mt-8 bg-gray-50 border-gray-300 shadow-lg">
             <CardContent className="pt-6">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-blue-100 rounded-lg">
+                <div className="p-2 bg-homeflip-purple rounded-lg">
                   {tipoVisita === "video" ? (
-                    <Video className="w-5 h-5 text-blue-600" />
+                    <Video className="w-5 h-5 text-white" />
                   ) : (
-                    <MapPin className="w-5 h-5 text-blue-600" />
+                    <MapPin className="w-5 h-5 text-white" />
                   )}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                  <h3 className="font-bold text-gray-900 mb-2">
                     {tipoVisita === "video"
                       ? "Como funciona a visita por vídeo?"
                       : "Informações importantes"}
                   </h3>
                   {tipoVisita === "video" ? (
-                    <div className="text-sm text-gray-600 space-y-1">
+                    <div className="text-sm text-gray-700 space-y-1 font-medium">
                       <p>• Você receberá um link por WhatsApp ou e-mail</p>
                       <p>
                         • A visita é feita ao vivo com um especialista HomeFlip
@@ -390,7 +390,7 @@ export default function AgendarVisita() {
                       <p>• Você pode fazer perguntas em tempo real</p>
                     </div>
                   ) : (
-                    <div className="text-sm text-gray-600 space-y-1">
+                    <div className="text-sm text-gray-700 space-y-1 font-medium">
                       <p>
                         • Confirmaremos o agendamento por telefone em até 2
                         horas

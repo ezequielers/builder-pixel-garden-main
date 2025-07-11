@@ -2,10 +2,7 @@ export default function PropertiesHero() {
   return (
     <section className="relative w-full min-h-[500px] sm:min-h-[600px] lg:h-[853px] bg-white shadow-[0px_4px_200px_0px_rgba(232,249,247,0.20)] overflow-hidden">
       {/* Enhanced Gradient Background */}
-      <div
-        className="absolute inset-0 w-full h-full"
-
-      />
+      <div className="absolute inset-0 w-full h-full" />
 
       {/* Content Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 lg:pt-[108px]">
@@ -21,18 +18,16 @@ export default function PropertiesHero() {
             {/* Hero Text Content */}
             <div className="absolute left-4 sm:left-8 lg:left-[180px] top-[30px] sm:top-[40px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
               <div
-                style={{ maxWidth: '100%' }}
+                style={{ maxWidth: "100%" }}
                 className="flex flex-col items-center gap-3 sm:gap-4 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg"
               >
                 <h1
-                  style={{ fontSize: '60px', lineHeight: '55px' }}
+                  style={{ fontSize: "60px", lineHeight: "55px" }}
                   className="text-white font-gantari font-bold leading-tight text-center"
                 >
                   Encontre uma casa que combine
                   <br />
-                  <span className="block">
-                    com seu estilo de vida.
-                  </span>
+                  <span className="block">com seu estilo de vida.</span>
                 </h1>
 
                 {/* <p className="w-full max-w-[765px] text-white font-inter text-sm md:text-base font-normal leading-relaxed text-center">
@@ -42,7 +37,6 @@ export default function PropertiesHero() {
                 </p> */}
               </div>
             </div>
-
 
             {/* Search Controls Section */}
             <div className="absolute left-4 md:left-[72px] bottom-4 md:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px]">
@@ -212,7 +206,10 @@ export default function PropertiesHero() {
                 </svg>
 
                 {/* Enhanced Search Button */}
-                <button style={{background: '#5245ED'}} className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-[0px_8px_25px_0px_rgba(94,17,119,0.4)] hover:scale-105 active:scale-95 group">
+                <button
+                  style={{ background: "#5245ED" }}
+                  className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-[0px_8px_25px_0px_rgba(94,17,119,0.4)] hover:scale-105 active:scale-95 group"
+                >
                   <svg
                     width="24"
                     height="24"
@@ -236,8 +233,8 @@ export default function PropertiesHero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-white font-inter text-base font-normal leading-5 uppercase transition-all duration-200 group-hover:font-semibold group-hover:tracking-wider">
-                    BUSCAR
+                  <span className="text-white text-base font-normal leading-5 transition-all duration-200 group-hover:font-semibold">
+                    Buscar
                   </span>
                 </button>
               </div>

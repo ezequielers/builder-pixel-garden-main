@@ -63,16 +63,16 @@ export default function DashboardProprietario() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="mb-8">
-            <h1 className="text-3xl font-telegraf font-bold text-gray-900 mb-2">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
               Dashboard do Proprietário
             </h1>
-            <p className="text-gray-600 font-source-code-pro">
+            <p className="text-gray-600 font-light">
               Gerencie seus imóveis e acompanhe o desempenho dos seus anúncios
             </p>
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
               <div className="flex items-center justify-between">
                 <div>

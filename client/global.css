@@ -107,7 +107,8 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Source Code Pro", monospace;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300; /* Light weight for body text */
   }
 
   h1,
@@ -115,8 +116,10 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  button {
     font-family: "Space Grotesk", sans-serif;
+    font-weight: 400; /* Regular weight for titles and buttons */
   }
 }
 
@@ -149,5 +152,18 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Responsive improvements for zoom */
+  .zoom-responsive {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* Better container behavior on zoom */
+  .responsive-container {
+    max-width: 100%;
+    overflow-x: auto;
   }
 }

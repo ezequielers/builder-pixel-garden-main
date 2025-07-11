@@ -10,7 +10,7 @@ import Index from "./pages/Index";
 import Imoveis from "./pages/Imoveis";
 
 import Contato from "./pages/Contato";
-import DetalheDeImoveisPage from "./pages/DetalheDeImoveis";
+import DetalheImovel from "./pages/DetalheImovel";
 import Login from "./pages/Login";
 import Registro from "./pages/Registro";
 import EsqueciSenha from "./pages/EsqueciSenha";
@@ -38,7 +38,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/imoveis" element={<Imoveis />} />
-          <Route path="/imoveis/:id" element={<DetalheDeImoveisPage />} />
+          <Route path="/imoveis/:id" element={<DetalheImovel />} />
 
           <Route path="/contato" element={<Contato />} />
           <Route path="/login" element={<Login />} />

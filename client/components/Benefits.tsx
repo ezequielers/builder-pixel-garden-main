@@ -68,7 +68,7 @@ export default function Benefits() {
                       lineHeight: "40px",
                     }}
                   >
-                    A Nova Maneira de Encontrar Seu Novo Lar
+                    A nova maneira de encontrar seu novo lar
                   </h2>
                   <p className="text-gray-600 font-montserrat font-light text-sm md:text-base leading-relaxed">
                     Encontre o lugar dos seus sonhos para morar entre mais de 10
@@ -78,7 +78,7 @@ export default function Benefits() {
                     to="/imoveis"
                     className="inline-block bg-homeflip-purple text-white px-5 py-2 rounded-lg font-medium font-telegraf text-sm transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"
                   >
-                    Pesquisar Imóveis
+                    Pesquisar imóveis
                   </Link>
                 </div>
               </div>
@@ -91,18 +91,18 @@ export default function Benefits() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group bg-white p-5 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                className="group bg-white p-5 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 h-full flex flex-col"
               >
-                <div className="mb-4 transition-transform duration-300 group-hover:scale-110 filter contrast-150 brightness-125 saturate-150">
+                <div className="mb-4 transition-transform duration-300 group-hover:scale-110 filter contrast-200 brightness-110 saturate-200">
                   {benefit.icon}
                 </div>
                 <h3
-                  className="font-semibold font-telegraf mb-2 transition-colors duration-300 group-hover:text-homeflip-purple"
+                  className="font-semibold mb-2 transition-colors duration-300 group-hover:text-homeflip-purple"
                   style={{ fontSize: "20px", color: "#000929" }}
                 >
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 font-montserrat font-light text-xs md:text-sm leading-relaxed">
+                <p className="text-gray-600 font-light text-xs md:text-sm leading-relaxed flex-1">
                   {benefit.description}
                 </p>
               </div>

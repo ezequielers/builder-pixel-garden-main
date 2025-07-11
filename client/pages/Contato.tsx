@@ -89,10 +89,8 @@ export default function Contato() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
-              <h2 className="text-2xl font-bold mb-3 font-telegraf">
-                Mensagem Enviada!
-              </h2>
-              <p className="text-gray-600 mb-6 font-source-code-pro">
+              <h2 className="text-2xl font-bold mb-3">Mensagem Enviada!</h2>
+              <p className="text-gray-600 mb-6 font-light">
                 Obrigado pelo seu contato. Nossa equipe responderá em até 24
                 horas.
               </p>
@@ -118,10 +116,10 @@ export default function Contato() {
         <div className="max-w-7xl mx-auto">
           {/* Header da página */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-telegraf">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Entre em Contato
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-source-code-pro">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
               Estamos aqui para ajudar você a encontrar o imóvel ideal ou
               esclarecer qualquer dúvida sobre nossos serviços.
             </p>
@@ -129,7 +127,7 @@ export default function Contato() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Informações de contato */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-1 space-y-8">
               {/* Telefone */}
               <Card>
                 <CardContent className="p-6">
@@ -138,10 +136,8 @@ export default function Contato() {
                       <Phone className="w-6 h-6 text-homeflip-purple" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2 font-telegraf">
-                        Telefone
-                      </h3>
-                      <p className="text-gray-600 mb-2 font-source-code-pro">
+                      <h3 className="font-bold text-lg mb-2">Telefone</h3>
+                      <p className="text-gray-600 mb-2 font-light">
                         Fale diretamente conosco
                       </p>
                       <a
@@ -163,10 +159,8 @@ export default function Contato() {
                       <Mail className="w-6 h-6 text-homeflip-purple" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2 font-telegraf">
-                        E-mail
-                      </h3>
-                      <p className="text-gray-600 mb-2 font-source-code-pro">
+                      <h3 className="font-bold text-lg mb-2">E-mail</h3>
+                      <p className="text-gray-600 mb-2 font-light">
                         Envie sua mensagem
                       </p>
                       <a
@@ -188,16 +182,24 @@ export default function Contato() {
                       <MapPin className="w-6 h-6 text-homeflip-purple" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2 font-telegraf">
-                        Escritório
-                      </h3>
-                      <p className="text-gray-600 mb-2 font-source-code-pro">
+                      <h3 className="font-bold text-lg mb-2">Escritório</h3>
+                      <p className="text-gray-600 mb-2 font-light">
                         Visite nosso escritório
                       </p>
-                      <p className="text-gray-800 font-source-code-pro">
-                        Av. Paulista, 1000 - Bela Vista
+                      <p className="text-gray-800 font-light">
+                        Avenida João Gualberto 1342
                         <br />
-                        São Paulo - SP, 01310-100
+                        Sala 505 Andar 05
+                        <br />
+                        Cond Urban Office e Hotel
+                        <br />
+                        Bloco Urban Office
+                        <br />
+                        Alto da Glória
+                        <br />
+                        Curitiba - PR
+                        <br />
+                        CEP: 80030-000
                       </p>
                     </div>
                   </div>
@@ -212,10 +214,10 @@ export default function Contato() {
                       <Clock className="w-6 h-6 text-homeflip-purple" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2 font-telegraf">
+                      <h3 className="font-bold text-lg mb-2">
                         Horário de Atendimento
                       </h3>
-                      <div className="space-y-1 text-gray-800 font-source-code-pro">
+                      <div className="space-y-1 text-gray-800 font-light">
                         <p>Segunda à Sexta: 8h às 18h</p>
                         <p>Sábado: 9h às 15h</p>
                         <p>Domingo: Fechado</p>
@@ -230,10 +232,8 @@ export default function Contato() {
             <div className="lg:col-span-2">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-telegraf">
-                    Envie sua Mensagem
-                  </CardTitle>
-                  <p className="text-gray-600 font-source-code-pro">
+                  <CardTitle className="text-2xl">Envie sua Mensagem</CardTitle>
+                  <p className="text-gray-600 font-light">
                     Preencha o formulário abaixo e entraremos em contato o mais
                     breve possível.
                   </p>
@@ -242,10 +242,7 @@ export default function Contato() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Tipo de contato */}
                     <div className="space-y-2">
-                      <Label
-                        htmlFor="tipoContato"
-                        className="font-telegraf font-medium"
-                      >
+                      <Label htmlFor="tipoContato" className="font-medium">
                         Tipo de contato *
                       </Label>
                       <Select
@@ -289,10 +286,7 @@ export default function Contato() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {/* Nome */}
                       <div className="space-y-2">
-                        <Label
-                          htmlFor="nome"
-                          className="font-telegraf font-medium"
-                        >
+                        <Label htmlFor="nome" className="font-medium">
                           Nome completo *
                         </Label>
                         <Input
@@ -303,17 +297,14 @@ export default function Contato() {
                             handleInputChange("nome", e.target.value)
                           }
                           placeholder="Seu nome completo"
-                          className="h-12 font-source-code-pro"
+                          className="h-12"
                           required
                         />
                       </div>
 
                       {/* Email */}
                       <div className="space-y-2">
-                        <Label
-                          htmlFor="email"
-                          className="font-telegraf font-medium"
-                        >
+                        <Label htmlFor="email" className="font-medium">
                           E-mail *
                         </Label>
                         <Input
@@ -324,17 +315,14 @@ export default function Contato() {
                             handleInputChange("email", e.target.value)
                           }
                           placeholder="seu@email.com"
-                          className="h-12 font-source-code-pro"
+                          className="h-12"
                           required
                         />
                       </div>
 
                       {/* Telefone */}
                       <div className="space-y-2">
-                        <Label
-                          htmlFor="telefone"
-                          className="font-telegraf font-medium"
-                        >
+                        <Label htmlFor="telefone" className="font-medium">
                           Telefone *
                         </Label>
                         <Input
@@ -345,17 +333,14 @@ export default function Contato() {
                             handleInputChange("telefone", e.target.value)
                           }
                           placeholder="(11) 99999-9999"
-                          className="h-12 font-source-code-pro"
+                          className="h-12"
                           required
                         />
                       </div>
 
                       {/* Assunto */}
                       <div className="space-y-2">
-                        <Label
-                          htmlFor="assunto"
-                          className="font-telegraf font-medium"
-                        >
+                        <Label htmlFor="assunto" className="font-medium">
                           Assunto *
                         </Label>
                         <Input
@@ -366,7 +351,7 @@ export default function Contato() {
                             handleInputChange("assunto", e.target.value)
                           }
                           placeholder="Assunto da mensagem"
-                          className="h-12 font-source-code-pro"
+                          className="h-12"
                           required
                         />
                       </div>
@@ -374,10 +359,7 @@ export default function Contato() {
 
                     {/* Mensagem */}
                     <div className="space-y-2">
-                      <Label
-                        htmlFor="mensagem"
-                        className="font-telegraf font-medium"
-                      >
+                      <Label htmlFor="mensagem" className="font-medium">
                         Mensagem *
                       </Label>
                       <Textarea
@@ -387,7 +369,7 @@ export default function Contato() {
                           handleInputChange("mensagem", e.target.value)
                         }
                         placeholder="Descreva sua dúvida ou solicitação..."
-                        className="min-h-32 font-source-code-pro"
+                        className="min-h-32"
                         required
                       />
                     </div>
@@ -399,7 +381,7 @@ export default function Contato() {
                       <Button
                         type="submit"
                         disabled={isSubmitting || !isFormValid()}
-                        className="bg-homeflip-purple hover:bg-homeflip-purple/90 px-8 py-3 h-12 min-w-40"
+                        className="bg-homeflip-purple hover:bg-[#4A0D5F] px-8 py-3 h-12 min-w-40 shadow-lg hover:shadow-xl"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center gap-2">
@@ -421,7 +403,7 @@ export default function Contato() {
               {/* Canais alternativos */}
               <Card className="mt-6 bg-gradient-to-br from-homeflip-gradient-from to-homeflip-gradient-to border-homeflip-purple/20">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-4 font-telegraf">
+                  <h3 className="font-bold text-lg mb-4">
                     Precisa de ajuda imediata?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -430,10 +412,8 @@ export default function Contato() {
                         <MessageCircle className="w-5 h-5 text-homeflip-purple" />
                       </div>
                       <div>
-                        <p className="font-semibold font-telegraf">
-                          Chat online
-                        </p>
-                        <p className="text-sm text-gray-600 font-source-code-pro">
+                        <p className="font-semibold">Chat online</p>
+                        <p className="text-sm text-gray-600 font-light">
                           Disponível 24/7
                         </p>
                       </div>
@@ -443,10 +423,8 @@ export default function Contato() {
                         <Phone className="w-5 h-5 text-homeflip-purple" />
                       </div>
                       <div>
-                        <p className="font-semibold font-telegraf">
-                          Ligação gratuita
-                        </p>
-                        <p className="text-sm text-gray-600 font-source-code-pro">
+                        <p className="font-semibold">Ligação gratuita</p>
+                        <p className="text-sm text-gray-600 font-light">
                           0800 123 4567
                         </p>
                       </div>
@@ -458,21 +436,23 @@ export default function Contato() {
           </div>
 
           {/* Mapa */}
-          <Card className="mt-12">
-            <CardContent className="p-0">
-              <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <MapPin className="w-12 h-12 mx-auto mb-4" />
-                  <p className="font-telegraf font-semibold">
-                    Localização do Escritório
-                  </p>
-                  <p className="text-sm font-source-code-pro">
-                    Av. Paulista, 1000 - Bela Vista, São Paulo - SP
-                  </p>
+          <div className="mt-12 flex justify-center">
+            <Card className="max-w-2xl w-full">
+              <CardContent className="p-0">
+                <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
+                  <div className="text-center text-gray-600">
+                    <MapPin className="w-12 h-12 mx-auto mb-4" />
+                    <p className="font-bold">Localização do Escritório</p>
+                    <p className="text-sm font-light mt-2">
+                      Avenida João Gualberto 1342
+                      <br />
+                      Alto da Glória, Curitiba - PR
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
 

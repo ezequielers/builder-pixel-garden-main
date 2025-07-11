@@ -20,7 +20,7 @@ export default function Footer() {
     //   ],
     // },
     {
-      title: "ALUGAR",
+      title: "Alugar",
       links: [
         // { text: "Comprar e vender propriedades", href: "/imoveis" },
         { text: "Alugar casa", href: "/imoveis" },
@@ -28,29 +28,20 @@ export default function Footer() {
       ],
     },
     {
-      title: "TERMOS E PRIVACIDADE",
+      title: "Termos e privacidade",
       links: [
-        { text: "Confiança e Segurança", href: "#" },
-        { text: "Termos de Serviço", href: "#" },
-        { text: "Política de Privacidade", href: "#" },
+        { text: "Confiança e segurança", href: "#" },
+        { text: "Termos de serviço", href: "#" },
+        { text: "Política de privacidade", href: "#" },
       ],
     },
     {
-      title: "SOBRE",
+      title: "Sobre",
       links: [
         { text: "Nossa empresa", href: "/sobre" },
         { text: "Como funciona", href: "/como-funciona" },
         { text: "Contato", href: "/contato" },
         { text: "Parceiros", href: "#" },
-      ],
-    },
-    {
-      title: "RECURSOS",
-      links: [
-        { text: "Blog", href: "#" },
-        { text: "Guias", href: "#" },
-        { text: "FAQ", href: "#" },
-        { text: "Central de Ajuda", href: "/contato" },
       ],
     },
   ];
@@ -76,13 +67,24 @@ export default function Footer() {
             </div>
             <div className="max-w-sm lg:max-w-xs xl:max-w-sm">
               <p
-                className="text-white/80 font-source-code-pro text-sm md:text-base
-                           leading-relaxed lg:leading-loose"
+                className="text-white/80 text-sm md:text-base
+                           leading-relaxed lg:leading-loose mb-4"
               >
                 Somos especialistas em conectar pessoas aos seus lares ideais.
                 Com anos de experiência no mercado imobiliário, oferecemos
                 soluções completas para locação de imóveis.
               </p>
+
+              <div className="text-white/70 text-xs md:text-sm leading-relaxed space-y-1">
+                <p className="font-medium">HomeFlip Imóveis</p>
+                <p>Avenida João Gualberto 1342</p>
+                <p>Sala 505 Andar 05</p>
+                <p>Cond Urban Office e Hotel</p>
+                <p>Bloco Urban Office</p>
+                <p>Alto da Glória</p>
+                <p>Curitiba - PR</p>
+                <p>CEP: 80030-000</p>
+              </div>
             </div>
           </div>
 

@@ -86,7 +86,7 @@ export default function CadastroImovel() {
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+              <label className="block text-sm  font-medium text-gray-700 mb-2">
                 Endereço completo *
               </label>
               <input
@@ -94,16 +94,16 @@ export default function CadastroImovel() {
                 value={propertyData.address}
                 onChange={(e) => updatePropertyData("address", e.target.value)}
                 placeholder="Ex: Rua das Flores, 123 - Vila Madalena"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
               />
-              <p className="text-xs font-source-code-pro text-gray-500 mt-1">
+              <p className="text-xs font-light text-gray-500 mt-1">
                 Começamos a completar automaticamente com base no CEP
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   CEP *
                 </label>
                 <input
@@ -111,12 +111,12 @@ export default function CadastroImovel() {
                   value={propertyData.cep}
                   onChange={(e) => updatePropertyData("cep", e.target.value)}
                   placeholder="00000-000"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Cidade *
                 </label>
                 <input
@@ -124,18 +124,18 @@ export default function CadastroImovel() {
                   value={propertyData.city}
                   onChange={(e) => updatePropertyData("city", e.target.value)}
                   placeholder="São Paulo"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Estado *
                 </label>
                 <select
                   value={propertyData.state}
                   onChange={(e) => updatePropertyData("state", e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 >
                   <option value="">Selecione</option>
                   <option value="SP">São Paulo</option>
@@ -145,10 +145,10 @@ export default function CadastroImovel() {
               </div>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-gray-50 border border-gray-300 rounded-lg p-4 shadow-lg">
               <div className="flex items-start gap-3">
                 <svg
-                  className="w-5 h-5 text-blue-500 mt-0.5"
+                  className="w-5 h-5 text-homeflip-purple mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -161,10 +161,10 @@ export default function CadastroImovel() {
                   />
                 </svg>
                 <div>
-                  <h4 className="font-telegraf font-medium text-blue-900 mb-1">
+                  <h4 className="font-medium text-gray-900 mb-1">
                     Estimativa de aluguel ideal
                   </h4>
-                  <p className="text-sm font-source-code-pro text-blue-700">
+                  <p className="text-sm font-light text-gray-700">
                     Com base na região informada, imóveis similares são alugados
                     por R$ 2.800 - R$ 3.200 por mês.
                   </p>
@@ -178,7 +178,7 @@ export default function CadastroImovel() {
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+              <label className="block text-sm  font-medium text-gray-700 mb-2">
                 Tipo de imóvel *
               </label>
               <select
@@ -186,7 +186,7 @@ export default function CadastroImovel() {
                 onChange={(e) =>
                   updatePropertyData("propertyType", e.target.value)
                 }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
               >
                 <option value="">Selecione o tipo</option>
                 {propertyTypes.map((type) => (
@@ -199,7 +199,7 @@ export default function CadastroImovel() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Área (m²) *
                 </label>
                 <input
@@ -207,12 +207,12 @@ export default function CadastroImovel() {
                   value={propertyData.area}
                   onChange={(e) => updatePropertyData("area", e.target.value)}
                   placeholder="80"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Quartos *
                 </label>
                 <select
@@ -220,7 +220,7 @@ export default function CadastroImovel() {
                   onChange={(e) =>
                     updatePropertyData("bedrooms", e.target.value)
                   }
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 >
                   <option value="">0</option>
                   {[1, 2, 3, 4, 5].map((num) => (
@@ -232,7 +232,7 @@ export default function CadastroImovel() {
               </div>
 
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Banheiros *
                 </label>
                 <select
@@ -240,7 +240,7 @@ export default function CadastroImovel() {
                   onChange={(e) =>
                     updatePropertyData("bathrooms", e.target.value)
                   }
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 >
                   <option value="">0</option>
                   {[1, 2, 3, 4, 5].map((num) => (
@@ -252,7 +252,7 @@ export default function CadastroImovel() {
               </div>
 
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Vagas Garagem
                 </label>
                 <select
@@ -260,7 +260,7 @@ export default function CadastroImovel() {
                   onChange={(e) =>
                     updatePropertyData("garages", e.target.value)
                   }
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 >
                   <option value="">0</option>
                   {[1, 2, 3, 4, 5].map((num) => (
@@ -273,7 +273,7 @@ export default function CadastroImovel() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-telegraf font-semibold text-gray-900">
+              <h3 className="text-lg  font-semibold text-gray-900">
                 Preferências
               </h3>
 
@@ -289,7 +289,7 @@ export default function CadastroImovel() {
                 />
                 <label
                   htmlFor="acceptsPets"
-                  className="font-source-code-pro text-gray-700"
+                  className="font-light text-gray-700"
                 >
                   Aceita animais de estimação
                 </label>
@@ -307,7 +307,7 @@ export default function CadastroImovel() {
                 />
                 <label
                   htmlFor="isFurnished"
-                  className="font-source-code-pro text-gray-700"
+                  className="font-light text-gray-700"
                 >
                   Imóvel mobiliado
                 </label>
@@ -320,7 +320,7 @@ export default function CadastroImovel() {
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+              <label className="block text-sm  font-medium text-gray-700 mb-2">
                 Valor do aluguel (R$) *
               </label>
               <input
@@ -330,7 +330,7 @@ export default function CadastroImovel() {
                   updatePropertyData("monthlyRent", e.target.value)
                 }
                 placeholder="3000"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
               />
             </div>
 
@@ -346,7 +346,7 @@ export default function CadastroImovel() {
               />
               <label
                 htmlFor="hasCondominium"
-                className="font-source-code-pro text-gray-700"
+                className="font-light text-gray-700"
               >
                 Possui taxa de condomínio
               </label>
@@ -354,7 +354,7 @@ export default function CadastroImovel() {
 
             {propertyData.hasCondominium && (
               <div>
-                <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+                <label className="block text-sm  font-medium text-gray-700 mb-2">
                   Taxa de condomínio (R$)
                 </label>
                 <input
@@ -364,13 +364,13 @@ export default function CadastroImovel() {
                     updatePropertyData("condominiumFee", e.target.value)
                   }
                   placeholder="400"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
                 />
               </div>
             )}
 
             <div>
-              <label className="block text-sm font-telegraf font-medium text-gray-700 mb-2">
+              <label className="block text-sm  font-medium text-gray-700 mb-2">
                 IPTU anual (R$)
               </label>
               <input
@@ -378,7 +378,7 @@ export default function CadastroImovel() {
                 value={propertyData.iptu}
                 onChange={(e) => updatePropertyData("iptu", e.target.value)}
                 placeholder="1200"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-source-code-pro"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-homeflip-purple focus:border-transparent font-light"
               />
             </div>
 
@@ -398,10 +398,10 @@ export default function CadastroImovel() {
                   />
                 </svg>
                 <div>
-                  <h4 className="font-telegraf font-medium text-green-900 mb-1">
+                  <h4 className=" font-medium text-green-900 mb-1">
                     Simulação de antecipação
                   </h4>
-                  <p className="text-sm font-source-code-pro text-green-700">
+                  <p className="text-sm font-light text-green-700">
                     Com esse valor, você pode antecipar até R$ 36.000 (12 meses)
                     com nossa parceria financeira.
                   </p>
@@ -415,7 +415,7 @@ export default function CadastroImovel() {
         return (
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-telegraf font-semibold text-gray-900 mb-4">
+              <h3 className="text-lg  font-semibold text-gray-900 mb-4">
                 Fotos do imóvel
               </h3>
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
@@ -433,20 +433,20 @@ export default function CadastroImovel() {
                   />
                 </svg>
                 <div className="mt-4">
-                  <button className="bg-homeflip-purple text-white px-6 py-2 rounded-lg font-source-code-pro hover:bg-[#4A0D5F] transition-colors duration-200">
+                  <button className="bg-homeflip-purple text-white px-6 py-2 rounded-lg font-light hover:bg-[#4A0D5F] transition-colors duration-200">
                     Escolher fotos
                   </button>
-                  <p className="mt-2 text-sm font-source-code-pro text-gray-600">
+                  <p className="mt-2 text-sm font-light text-gray-600">
                     PNG, JPG até 10MB cada
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-gray-50 border border-gray-300 rounded-lg p-4 shadow-lg">
               <div className="flex items-start gap-3">
                 <svg
-                  className="w-5 h-5 text-blue-500 mt-0.5"
+                  className="w-5 h-5 text-homeflip-purple mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -465,14 +465,14 @@ export default function CadastroImovel() {
                   />
                 </svg>
                 <div>
-                  <h4 className="font-telegraf font-medium text-blue-900 mb-1">
+                  <h4 className="font-medium text-gray-900 mb-1">
                     Fotógrafo profissional HomeFlip
                   </h4>
-                  <p className="text-sm font-source-code-pro text-blue-700">
+                  <p className="text-sm font-light text-gray-700">
                     Prefere que um profissional fotografe seu imóvel? Agende um
                     fotógrafo HomeFlip gratuitamente.
                   </p>
-                  <button className="mt-2 text-blue-600 font-source-code-pro text-sm hover:text-blue-800">
+                  <button className="mt-2 text-blue-600 font-light text-sm hover:text-blue-800">
                     Agendar fotógrafo →
                   </button>
                 </div>
@@ -495,10 +495,10 @@ export default function CadastroImovel() {
                   />
                 </svg>
                 <div>
-                  <h4 className="font-telegraf font-medium text-yellow-900 mb-1">
+                  <h4 className=" font-medium text-yellow-900 mb-1">
                     Tempo médio de locação
                   </h4>
-                  <p className="text-sm font-source-code-pro text-yellow-700">
+                  <p className="text-sm font-light text-yellow-700">
                     Na sua região, imóveis similares são alugados em média em 15
                     dias.
                   </p>
@@ -523,7 +523,7 @@ export default function CadastroImovel() {
           <div className="mb-8">
             <Link
               to="/dashboard-proprietario"
-              className="inline-flex items-center text-homeflip-purple hover:text-[#4A0D5F] font-source-code-pro text-sm mb-4"
+              className="inline-flex items-center text-homeflip-purple hover:text-[#4A0D5F] font-light text-sm mb-4"
             >
               <svg
                 className="w-4 h-4 mr-2"
@@ -540,10 +540,10 @@ export default function CadastroImovel() {
               </svg>
               Voltar ao Dashboard
             </Link>
-            <h1 className="text-3xl font-telegraf font-bold text-gray-900 mb-2">
-              Cadastrar Novo Imóvel
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Cadastrar novo imóvel
             </h1>
-            <p className="text-gray-600 font-source-code-pro">
+            <p className="text-gray-600 font-light">
               Siga os passos abaixo para cadastrar seu imóvel de forma rápida e
               fácil
             </p>
@@ -574,14 +574,12 @@ export default function CadastroImovel() {
                         />
                       </svg>
                     ) : (
-                      <span className="text-sm font-telegraf font-medium">
-                        {step.id}
-                      </span>
+                      <span className="text-sm  font-medium">{step.id}</span>
                     )}
                   </div>
                   <div className="ml-3">
                     <p
-                      className={`text-sm font-telegraf font-medium ${
+                      className={`text-sm  font-medium ${
                         currentStep >= step.id
                           ? "text-homeflip-purple"
                           : "text-gray-400"
@@ -589,7 +587,7 @@ export default function CadastroImovel() {
                     >
                       {step.title}
                     </p>
-                    <p className="text-xs font-source-code-pro text-gray-500">
+                    <p className="text-xs font-light text-gray-500">
                       {step.description}
                     </p>
                   </div>
@@ -616,7 +614,7 @@ export default function CadastroImovel() {
               <button
                 onClick={handlePrevious}
                 disabled={currentStep === 1}
-                className={`px-6 py-3 rounded-lg font-source-code-pro font-medium transition-colors duration-200 ${
+                className={`px-6 py-3 rounded-lg font-light font-medium transition-colors duration-200 ${
                   currentStep === 1
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -626,13 +624,13 @@ export default function CadastroImovel() {
               </button>
 
               {currentStep === totalSteps ? (
-                <button className="bg-homeflip-purple text-white px-8 py-3 rounded-lg font-source-code-pro font-medium hover:bg-[#4A0D5F] transition-colors duration-200">
+                <button className="bg-homeflip-purple text-white px-8 py-3 rounded-lg font-light font-medium hover:bg-[#4A0D5F] transition-colors duration-200">
                   Finalizar Cadastro
                 </button>
               ) : (
                 <button
                   onClick={handleNext}
-                  className="bg-homeflip-purple text-white px-6 py-3 rounded-lg font-source-code-pro font-medium hover:bg-[#4A0D5F] transition-colors duration-200"
+                  className="bg-homeflip-purple text-white px-6 py-3 rounded-lg font-light font-medium hover:bg-[#4A0D5F] transition-colors duration-200"
                 >
                   Próximo
                 </button>

@@ -194,10 +194,18 @@ export default function DashboardInquilino() {
                     )}
                     .
                   </p>
-                  <Button className="bg-orange-600 hover:bg-orange-700 text-white">
-                    Pagar Agora - R${" "}
-                    {proximoVencimento.valor.toLocaleString("pt-BR")}
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button className="bg-orange-600 hover:bg-orange-700 text-white">
+                      Pagar Agora - R${" "}
+                      {proximoVencimento.valor.toLocaleString("pt-BR")}
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="text-orange-600 border-orange-300 hover:bg-orange-50"
+                    >
+                      Negociar Valor
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             )}
@@ -327,7 +335,7 @@ export default function DashboardInquilino() {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Quick Actions */}
             <Card>
               <CardHeader>

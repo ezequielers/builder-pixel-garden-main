@@ -4,8 +4,7 @@ export default function TenantsLandlords() {
       id: 1,
       icon: (
         <div className="relative w-16 h-16">
-          <div className="w-16 h-16 bg-white border border-[#E0DEF7] rounded-full absolute inset-0" />
-          <div className="w-14 h-14 bg-[#E8E6F9] rounded-full absolute inset-0 m-auto" />
+          <div className="w-16 h-16 bg-homeflip-navy rounded-full absolute inset-0" />
           <svg
             width="32"
             height="32"
@@ -16,14 +15,14 @@ export default function TenantsLandlords() {
           >
             <path
               d="M12.0001 29.3333H20.0001C26.6667 29.3333 29.3334 26.6666 29.3334 20V12C29.3334 5.33329 26.6667 2.66663 20.0001 2.66663H12.0001C5.33341 2.66663 2.66675 5.33329 2.66675 12V20C2.66675 26.6666 5.33341 29.3333 12.0001 29.3333Z"
-              stroke="#4A3FBF"
+              stroke="white"
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M12.1333 15.9999V14.0265C12.1333 11.4799 13.9333 10.4532 16.1333 11.7199L17.84 12.7065L19.5466 13.6932C21.7466 14.9599 21.7466 17.0399 19.5466 18.3065L17.84 19.2932L16.1333 20.2799C13.9333 21.5465 12.1333 20.5065 12.1333 17.9732V15.9999Z"
-              stroke="#4A3FBF"
+              stroke="white"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -82,7 +81,7 @@ export default function TenantsLandlords() {
           >
             <path
               d="M28 9.33329V22.6666C28 26.6666 26 29.3333 21.3333 29.3333H10.6667C6 29.3333 4 26.6666 4 22.6666V9.33329C4 5.33329 6 2.66663 10.6667 2.66663H21.3333C26 2.66663 28 5.33329 28 9.33329Z"
-              stroke="#4A3FBF"
+              stroke="#000000"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -90,7 +89,7 @@ export default function TenantsLandlords() {
             />
             <path
               d="M19.3333 6V8.66667C19.3333 10.1333 20.5333 11.3333 21.9999 11.3333H24.6666"
-              stroke="#4A3FBF"
+              stroke="#000000"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -98,7 +97,7 @@ export default function TenantsLandlords() {
             />
             <path
               d="M10.6667 17.3334H16.0001"
-              stroke="#4A3FBF"
+              stroke="#000000"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -106,7 +105,7 @@ export default function TenantsLandlords() {
             />
             <path
               d="M10.6667 22.6666H21.3334"
-              stroke="#4A3FBF"
+              stroke="#000000"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -143,14 +142,14 @@ export default function TenantsLandlords() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Headline */}
         <div className="text-center mb-16 md:mb-20">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-white font-telegraf text-xl md:text-2xl lg:text-3xl font-bold leading-tight mb-6">
-              <span>Nós Facilitamos para </span>
-              <span className="text-[#4A3FBF]">Inquilinos</span>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-bold leading-tight mb-6 text-center">
+              <span>Nós facilitamos para </span>
+              <span className="text-[#4A3FBF]">inquilinos</span>
               <span> e </span>
-              <span className="text-[#4A3FBF]">Proprietários</span>
+              <span className="text-[#4A3FBF]">proprietários</span>
             </h2>
-            <p className="text-white font-montserrat font-light text-sm md:text-base leading-relaxed opacity-70 max-w-2xl mx-auto">
+            <p className="text-white font-light text-sm md:text-base leading-relaxed opacity-70 max-w-2xl mx-auto text-center">
               Seja para vender seu imóvel atual, obter financiamento ou comprar
               um novo, nós tornamos tudo fácil e eficiente. E a melhor parte?
               Você economizará muito tempo e dinheiro com nossos serviços.
@@ -169,12 +168,12 @@ export default function TenantsLandlords() {
                 <div className="flex-shrink-0">{feature.icon}</div>
                 <div className="flex flex-col justify-center h-full">
                   <h3
-                    className={`font-telegraf text-xl font-bold leading-tight tracking-tight mb-4 ${feature.textColor}`}
+                    className={`text-xl font-bold leading-tight tracking-tight mb-4 ${feature.textColor}`}
                   >
                     {feature.title}
                   </h3>
                   <p
-                    className={`font-montserrat font-light text-sm leading-relaxed ${
+                    className={`font-light text-sm leading-relaxed ${
                       feature.textColor === "text-white"
                         ? "text-white opacity-70"
                         : "text-gray-600"
