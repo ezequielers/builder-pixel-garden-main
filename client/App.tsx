@@ -25,6 +25,18 @@ import PropostaExpressa from "./pages/PropostaExpressa";
 import AnaliseInteligente from "./pages/AnaliseInteligente";
 import AgendarVisita from "./pages/AgendarVisita";
 import ComoFunciona from "./pages/ComoFunciona";
+import DashboardAdmin from "./pages/DashboardAdmin";
+import AdminUsuarios from "./pages/AdminUsuarios";
+import AdminImoveis from "./pages/AdminImoveis";
+import AdminRelatorios from "./pages/AdminRelatorios";
+import AdminConfiguracoes from "./pages/AdminConfiguracoes";
+import AdminPagamentos from "./pages/AdminPagamentos";
+import AdminTaxas from "./pages/AdminTaxas";
+import AdminContratos from "./pages/AdminContratos";
+import AdminAnalises from "./pages/AdminAnalises";
+import AdminManutencoes from "./pages/AdminManutencoes";
+import InquilinoHistoricoPagamentos from "./pages/InquilinoHistoricoPagamentos";
+import InquilinoManutencoes from "./pages/InquilinoManutencoes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -65,11 +77,32 @@ const App = () => (
             element={<GestaoFinanceira />}
           />
           <Route path="/dashboard-inquilino" element={<DashboardInquilino />} />
+          <Route
+            path="/dashboard-inquilino/pagamentos"
+            element={<InquilinoHistoricoPagamentos />}
+          />
+          <Route
+            path="/dashboard-inquilino/manutencoes"
+            element={<InquilinoManutencoes />}
+          />
           <Route path="/proposta" element={<Proposta />} />
           <Route path="/proposta-expressa" element={<PropostaExpressa />} />
           <Route path="/analise-inteligente" element={<AnaliseInteligente />} />
           <Route path="/agendar-visita" element={<AgendarVisita />} />
           <Route path="/como-funciona" element={<ComoFunciona />} />
+
+          {/* Admin Routes */}
+          <Route path="/admin" element={<DashboardAdmin />} />
+          <Route path="/admin/usuarios" element={<AdminUsuarios />} />
+          <Route path="/admin/imoveis" element={<AdminImoveis />} />
+          <Route path="/admin/relatorios" element={<AdminRelatorios />} />
+          <Route path="/admin/configuracoes" element={<AdminConfiguracoes />} />
+          <Route path="/admin/pagamentos" element={<AdminPagamentos />} />
+          <Route path="/admin/taxas" element={<AdminTaxas />} />
+          <Route path="/admin/contratos" element={<AdminContratos />} />
+          <Route path="/admin/analises" element={<AdminAnalises />} />
+          <Route path="/admin/manutencoes" element={<AdminManutencoes />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
