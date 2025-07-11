@@ -18,6 +18,7 @@ export default {
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         telegraf: ["Space Grotesk", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
         "source-code-pro": ["Source Code Pro", "monospace"],
       },
       fontSize: {
