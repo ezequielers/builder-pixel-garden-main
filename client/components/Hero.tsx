@@ -57,12 +57,12 @@ export default function Hero() {
             <div className="absolute left-4 sm:left-8 lg:left-[72px] top-[40px] sm:top-[60px] md:top-[80px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
               <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                 {/* Main Headline */}
-                <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight">
-                  Encontre seu imóvel perfeito
+                <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight">
+                  Encontre o imóvel perfeito para seu estilo de vida!
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-white/90 font-montserrat text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-md">
+                <p className="text-white/90 font-montserrat text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-lg">
                   Mais que um imóvel. Um lugar para chamar de seu lar. Seu
                   estilo de vida merece o imóvel certo. Descubra com a gente.
                 </p>
@@ -110,7 +110,7 @@ export default function Hero() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                      <span className="text-[#000000] text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#5e1177]">
+                      <span className="text-[#000000] text-lg sm:text-xl font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#5e1177]">
                         Alugar
                       </span>
                     </div>
@@ -149,7 +149,7 @@ export default function Hero() {
                       onChange={(e) =>
                         setFilters({ ...filters, search: e.target.value })
                       }
-                      className="border-0 bg-transparent text-[#000929] placeholder:text-[#000929] placeholder:opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0 h-auto p-0 text-base"
+                      className="border-0 bg-transparent text-[#000929] placeholder:text-[#000929] placeholder:opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0 h-auto p-0 text-base sm:text-lg"
                     />
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export default function Hero() {
                       setFilters({ ...filters, category: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
+                    <SelectTrigger className="h-12 md:h-[56px] px-4 bg-[#F6F6F6] border-none font-montserrat text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Categoria" />
                     </SelectTrigger>
                     <SelectContent
@@ -188,7 +188,7 @@ export default function Hero() {
                       setFilters({ ...filters, propertyType: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
+                    <SelectTrigger className="h-12 md:h-[56px] px-4 bg-[#F6F6F6] border-none font-montserrat text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Tipo de imóvel" />
                     </SelectTrigger>
                     <SelectContent
@@ -213,7 +213,7 @@ export default function Hero() {
                       setFilters({ ...filters, location: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
+                    <SelectTrigger className="h-12 md:h-[56px] px-4 bg-[#F6F6F6] border-none font-montserrat text-base md:text-lg transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Localização" />
                     </SelectTrigger>
                     <SelectContent
@@ -277,7 +277,7 @@ export default function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-white text-base font-normal leading-5 transition-all duration-200 group-hover:font-semibold">
+                  <span className="text-white text-base sm:text-lg font-normal leading-5 transition-all duration-200 group-hover:font-semibold">
                     Buscar
                   </span>
                 </button>

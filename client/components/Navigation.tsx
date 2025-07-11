@@ -22,10 +22,10 @@ export default function Navigation({ className = "" }: NavigationProps) {
         <Link
           key={item.name}
           to={item.href}
-          className={`font-gantari font-normal hover:text-gray-600 transition-colors ${
+          className={`font-gantari font-medium hover:text-homeflip-purple transition-colors ${
             isMobileLayout
-              ? "text-gray-900 text-lg py-3 px-4 rounded-lg hover:bg-gray-50 w-full block"
-              : "text-black text-sm md:text-base"
+              ? "text-homeflip-purple text-xl py-3 px-4 rounded-lg hover:bg-gray-50 w-full block"
+              : "text-homeflip-purple text-base md:text-lg lg:text-xl"
           }`}
         >
           {item.name}

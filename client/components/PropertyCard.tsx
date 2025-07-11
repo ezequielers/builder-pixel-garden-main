@@ -20,7 +20,11 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   const features = [
     {
       icon: (
-        <img src="/images/IconQuarto.svg" alt="Quartos" className="w-4 h-4" />
+        <img
+          src="/images/IconQuarto.svg"
+          alt="Quartos"
+          className="w-4 h-4 sm:w-5 sm:h-5"
+        />
       ),
       value: property.bedrooms,
       label: "Quartos",
@@ -30,7 +34,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
         <img
           src="/images/IconBanheiro.svg"
           alt="Banheiros"
-          className="w-4 h-4"
+          className="w-4 h-4 sm:w-5 sm:h-5"
         />
       ),
       value: property.bathrooms,
@@ -38,14 +42,22 @@ export default function PropertyCard({ property }: PropertyCardProps) {
     },
     {
       icon: (
-        <img src="/images/IconTotal.svg" alt="Área total" className="w-4 h-4" />
+        <img
+          src="/images/IconTotal.svg"
+          alt="Área total"
+          className="w-4 h-4 sm:w-5 sm:h-5"
+        />
       ),
       value: property.area,
       label: "Área total",
     },
     {
       icon: (
-        <img src="/images/IconGaragem.svg" alt="Garagens" className="w-4 h-4" />
+        <img
+          src="/images/IconGaragem.svg"
+          alt="Garagens"
+          className="w-4 h-4 sm:w-5 sm:h-5"
+        />
       ),
       value: property.garages,
       label: "Garagens",
@@ -63,7 +75,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
           />
           <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
-            <span className="bg-homeflip-purple text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm font-medium font-inter whitespace-nowrap">
+            <span className="bg-homeflip-purple text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-sm sm:text-base font-medium font-inter whitespace-nowrap">
               {property.status}
             </span>
           </div>
@@ -71,10 +83,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
 
         {/* Property Info */}
         <div className="p-3 sm:p-4 lg:p-5 flex-1 flex flex-col">
-          <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 font-inter mb-2 group-hover:text-homeflip-purple transition-colors duration-300 line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]">
+          <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 font-inter mb-2 group-hover:text-homeflip-purple transition-colors duration-300 line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]">
             {property.title}
           </h3>
-          <p className="text-gray-600 font-inter text-xs sm:text-sm mb-2 sm:mb-3 line-clamp-2 flex-1">
+          <p className="text-gray-600 font-inter text-sm sm:text-base mb-2 sm:mb-3 line-clamp-2 flex-1">
             {getApproximateLocation(property.address)}
           </p>
           <div className="text-lg sm:text-xl lg:text-2xl font-bold text-homeflip-purple font-inter mb-3 sm:mb-4 truncate">
@@ -91,10 +103,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
                 <div className="mb-1 text-gray-700 flex-shrink-0">
                   {feature.icon}
                 </div>
-                <span className="font-medium text-xs sm:text-sm leading-tight">
+                <span className="font-medium text-sm sm:text-base leading-tight">
                   {feature.value}
                 </span>
-                <span className="text-[9px] sm:text-xs leading-tight line-clamp-2 px-1">
+                <span className="text-xs sm:text-sm leading-tight line-clamp-2 px-1">
                   {feature.label}
                 </span>
               </div>

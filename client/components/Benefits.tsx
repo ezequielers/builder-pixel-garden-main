@@ -7,7 +7,7 @@ export default function Benefits() {
         <img
           src="/images/IconHome.svg"
           alt="Home"
-          className="flex-shrink-0 w-12 h-12"
+          className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
       title: "Seguro de Propriedade",
@@ -19,7 +19,7 @@ export default function Benefits() {
         <img
           src="/images/IconCash.svg"
           alt="Cash"
-          className="flex-shrink-0 w-12 h-12"
+          className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
       title: "Melhor Preço",
@@ -31,7 +31,7 @@ export default function Benefits() {
         <img
           src="/images/IconArrow.svg"
           alt="Arrow"
-          className="flex-shrink-0 w-12 h-12"
+          className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
       title: "Comissão Mais Baixa",
@@ -43,7 +43,7 @@ export default function Benefits() {
         <img
           src="/images/IconLocalization.svg"
           alt="Localization"
-          className="flex-shrink-0 w-12 h-12"
+          className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14"
         />
       ),
       title: "Controle Total",
@@ -61,22 +61,20 @@ export default function Benefits() {
               <div className="p-6 md:p-8 flex-1 flex flex-col justify-center">
                 <div className="space-y-4">
                   <h2
-                    className="font-bold font-telegraf leading-tight"
+                    className="font-bold font-telegraf leading-tight text-2xl sm:text-3xl lg:text-4xl"
                     style={{
                       color: "#0D0A3E",
-                      fontSize: "32px",
-                      lineHeight: "40px",
                     }}
                   >
                     A nova maneira de encontrar seu novo lar
                   </h2>
-                  <p className="text-gray-600 font-montserrat font-light text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-600 font-montserrat font-light text-base sm:text-lg leading-relaxed">
                     Encontre o lugar dos seus sonhos para morar entre mais de 10
                     mil imóveis listados.
                   </p>
                   <Link
                     to="/imoveis"
-                    className="inline-block bg-homeflip-purple text-white px-5 py-2 rounded-lg font-medium font-telegraf text-sm transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"
+                    className="inline-block bg-homeflip-purple text-white px-6 py-3 rounded-lg font-medium font-telegraf text-base sm:text-lg transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"
                   >
                     Pesquisar imóveis
                   </Link>
@@ -97,12 +95,12 @@ export default function Benefits() {
                   {benefit.icon}
                 </div>
                 <h3
-                  className="font-semibold mb-2 transition-colors duration-300 group-hover:text-homeflip-purple"
-                  style={{ fontSize: "20px", color: "#000929" }}
+                  className="font-semibold mb-2 transition-colors duration-300 group-hover:text-homeflip-purple text-lg sm:text-xl"
+                  style={{ color: "#000929" }}
                 >
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 font-light text-xs md:text-sm leading-relaxed flex-1">
+                <p className="text-gray-600 font-light text-sm sm:text-base leading-relaxed flex-1">
                   {benefit.description}
                 </p>
               </div>

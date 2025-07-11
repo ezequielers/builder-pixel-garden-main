@@ -69,7 +69,7 @@ export default function Footer() {
                 `}
               >
                 <h3
-                  className="text-white font-telegraf text-sm sm:text-base lg:text-lg
+                  className="text-white font-telegraf text-base sm:text-lg lg:text-xl
                              font-bold tracking-wide leading-tight
                              mb-4 sm:mb-5 md:mb-6"
                 >
@@ -81,7 +81,7 @@ export default function Footer() {
                       <a
                         href={link.href}
                         className="text-white/70 hover:text-white
-                                 font-source-code-pro text-sm md:text-base
+                                 font-source-code-pro text-base md:text-lg
                                  transition-colors duration-200 ease-out
                                  hover:underline decoration-1 underline-offset-2
                                  focus:outline-none focus:text-white focus:underline
@@ -108,8 +108,8 @@ export default function Footer() {
               />
             </div>
 
-            <div className="text-white/70 text-sm md:text-base leading-relaxed">
-              <p className="font-medium text-white mb-3 text-base md:text-lg">
+            <div className="text-white/70 text-base md:text-lg leading-relaxed">
+              <p className="font-medium text-white mb-3 text-lg md:text-xl">
                 Endereço:
               </p>
               <div className="space-y-1.5">
@@ -135,7 +135,7 @@ export default function Footer() {
         >
           <div className="text-center sm:text-left">
             <p
-              className="text-white/60 font-source-code-pro text-sm md:text-base
+              className="text-white/60 font-source-code-pro text-base md:text-lg
                         leading-relaxed"
             >
               ©{new Date().getFullYear()} HomeFlip. Todos os direitos

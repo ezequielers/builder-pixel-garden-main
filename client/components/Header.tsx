@@ -41,7 +41,7 @@ export default function Header({ showGradient }: HeaderProps) {
             href="https://wa.me/5541987409945?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20HomeFlip"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 text-xs sm:text-sm font-medium whitespace-nowrap shadow-lg hover:shadow-xl"
+            className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg bg-homeflip-purple text-white hover:bg-[#4A0D5F] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-homeflip-purple/50 text-sm sm:text-base font-medium whitespace-nowrap shadow-lg hover:shadow-xl"
           >
             <svg
               width="16"
@@ -91,14 +91,14 @@ export default function Header({ showGradient }: HeaderProps) {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="text-gray-900 text-sm font-medium group-hover:text-blue-600 transition-colors duration-200">
+            <span className="text-gray-900 text-sm sm:text-base font-medium group-hover:text-blue-600 transition-colors duration-200">
               Login
             </span>
           </a>
         </div>
 
         {/* Segunda linha do cabeçalho */}
-        <div className="h-16 sm:h-18 md:h-20 lg:h-24 xl:h-[107px] flex items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        <div className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-[107px] flex items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           {/* Logo - justificado à esquerda */}
           <div className="flex items-center flex-shrink-0">
             <Logo />
@@ -114,7 +114,7 @@ export default function Header({ showGradient }: HeaderProps) {
           {/* Campo de busca - justificado à direita */}
           <div className="hidden lg:flex items-center">
             {/* Campo de busca */}
-            <div className="flex items-center bg-gray-50 rounded-lg px-4 py-2 min-w-[200px] hover:bg-gray-100 transition-colors duration-200">
+            <div className="flex items-center bg-gray-50 rounded-lg px-4 py-3 min-w-[220px] xl:min-w-[250px] hover:bg-gray-100 transition-colors duration-200">
               <svg
                 width="20"
                 height="20"
@@ -141,7 +141,7 @@ export default function Header({ showGradient }: HeaderProps) {
               <input
                 type="text"
                 placeholder="Buscar imóveis..."
-                className="bg-transparent outline-none text-sm placeholder-gray-400 flex-1"
+                className="bg-transparent outline-none text-base placeholder-gray-400 flex-1"
               />
             </div>
           </div>
@@ -196,7 +196,7 @@ export default function Header({ showGradient }: HeaderProps) {
       >
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
-          <div className="text-lg font-telegraf font-bold text-gray-900">
+          <div className="text-xl font-telegraf font-bold text-gray-900">
             Menu
           </div>
           <button
@@ -253,7 +253,7 @@ export default function Header({ showGradient }: HeaderProps) {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="text-base font-medium">
+              <span className="text-lg font-medium">
                 Fale com um especialista
               </span>
             </a>
@@ -287,7 +287,7 @@ export default function Header({ showGradient }: HeaderProps) {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="text-gray-900 text-base font-medium">
+              <span className="text-gray-900 text-lg font-medium">
                 Fazer login
               </span>
             </a>
