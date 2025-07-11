@@ -231,4 +231,29 @@
       font-size: 1rem;
     }
   }
+
+  /* Fix for select dropdowns on mobile scroll */
+  .radix-select-content {
+    position: fixed !important;
+    z-index: 9999 !important;
+  }
+
+  /* Prevent layout shift on mobile */
+  .hero-search-form {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Better touch handling for select components */
+  @media (hover: none) and (pointer: coarse) {
+    .select-trigger {
+      min-height: 48px;
+    }
+  }
+
+  /* Prevent select content from being clipped */
+  [data-radix-popper-content-wrapper] {
+    z-index: 9999 !important;
+  }
 }

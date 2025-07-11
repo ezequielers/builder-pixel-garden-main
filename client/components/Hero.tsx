@@ -58,25 +58,21 @@ export default function Hero() {
               <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                 {/* Main Headline */}
                 <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight">
-                  Encontre o imóvel perfeito para seu estilo de vida!
+                  Encontre seu imóvel perfeito
                 </h1>
 
-                {/* Description */}
-                {/* <p className="text-white font-inter text-sm md:text-base font-normal leading-relaxed max-w-md">
-                  Lorem ipsum dolor sit amet consectetur. Nec risus quis viverra
-                  libero tellus eget. Leo morbi faucibus mattis pharetra tellus
-                  velit ultricies duis rhoncus. Porttitor fermentum eu urna eget
-                </p> */}
+                {/* Subtitle */}
+                <p className="text-white/90 font-montserrat text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-md">
+                  Mais que um imóvel. Um lugar para chamar de seu lar. Seu
+                  estilo de vida merece o imóvel certo. Descubra com a gente.
+                </p>
               </div>
             </div>
 
             {/* Search Controls Section */}
-            <div className="absolute left-4 md:left-[72px] bottom-6 md:bottom-8 lg:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px]">
+            <div className="absolute left-4 md:left-[72px] bottom-6 md:bottom-8 lg:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px] z-10">
               {/* Search Control Bar */}
-              <div
-                className="flex flex-col md:flex-row gap-3 mb-4"
-                style={{ marginTop: -20 }}
-              >
+              <div className="flex flex-col md:flex-row gap-3 mb-4">
                 {/* Alugar Button (Single Option) */}
                 <div className="inline-flex p-2 justify-start items-center rounded-lg border-[1.5px] border-[#7065F0] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
                   <div className="w-full md:w-[250px] h-12 relative group">
@@ -160,7 +156,7 @@ export default function Hero() {
               </div>
 
               {/* Enhanced Search Form */}
-              <div className="flex flex-col lg:flex-row w-full h-auto p-4 sm:p-6 lg:p-8 xl:p-10 items-start lg:items-center gap-4 sm:gap-6 lg:gap-4 xl:gap-3 rounded-xl bg-white shadow-[0px_8px_40px_0px_rgba(0,0,0,0.20)] backdrop-blur-lg transition-all duration-300 hover:shadow-[0px_12px_50px_0px_rgba(0,0,0,0.25)] border border-white/20">
+              <div className="flex flex-col lg:flex-row w-full h-auto p-4 sm:p-6 lg:p-8 xl:p-10 items-start lg:items-center gap-4 sm:gap-6 lg:gap-4 xl:gap-3 rounded-xl bg-white shadow-[0px_8px_40px_0px_rgba(0,0,0,0.20)] backdrop-blur-lg transition-all duration-300 hover:shadow-[0px_12px_50px_0px_rgba(0,0,0,0.25)] border border-white/20 relative">
                 {/* Categoria Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
                   <Select
@@ -169,10 +165,14 @@ export default function Hero() {
                       setFilters({ ...filters, category: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md">
+                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Categoria" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent
+                      className="z-[60]"
+                      position="popper"
+                      sideOffset={4}
+                    >
                       <SelectItem value="rent">Alugar</SelectItem>
                       <SelectItem value="buy">Comprar</SelectItem>
                       <SelectItem value="sell">Vender</SelectItem>
@@ -188,10 +188,14 @@ export default function Hero() {
                       setFilters({ ...filters, propertyType: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md">
+                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Tipo de imóvel" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent
+                      className="z-[60]"
+                      position="popper"
+                      sideOffset={4}
+                    >
                       <SelectItem value="Apartamento">Apartamento</SelectItem>
                       <SelectItem value="Casa">Casa</SelectItem>
                       <SelectItem value="Loft">Loft</SelectItem>
@@ -209,10 +213,14 @@ export default function Hero() {
                       setFilters({ ...filters, location: value })
                     }
                   >
-                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md">
+                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md relative">
                       <SelectValue placeholder="Localização" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent
+                      className="z-[60]"
+                      position="popper"
+                      sideOffset={4}
+                    >
                       <SelectItem value="São Paulo">São Paulo</SelectItem>
                       <SelectItem value="Rio de Janeiro">
                         Rio de Janeiro

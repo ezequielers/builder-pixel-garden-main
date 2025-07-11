@@ -128,9 +128,12 @@ export default function AdminTaxas() {
     aplicacao: "",
   });
 
-  const [simulacao, setSimulacao] = useState({
+  const [simulacao, setSimulacao] = useState<{
+    valorAluguel: number;
+    categoria: "inquilino" | "proprietario";
+  }>({
     valorAluguel: 3000,
-    categoria: "inquilino" as const,
+    categoria: "inquilino",
   });
 
   const getTipoColor = (tipo: string) => {
