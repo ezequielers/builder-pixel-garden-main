@@ -1,4 +1,33 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+
 export default function Hero() {
+  const navigate = useNavigate();
+  const [filters, setFilters] = useState({
+    category: "",
+    propertyType: "",
+    location: "",
+    search: "",
+  });
+
+  const handleSearch = () => {
+    const searchParams = new URLSearchParams();
+    if (filters.category) searchParams.set("category", filters.category);
+    if (filters.propertyType) searchParams.set("type", filters.propertyType);
+    if (filters.location) searchParams.set("location", filters.location);
+    if (filters.search) searchParams.set("search", filters.search);
+
+    navigate(`/imoveis?${searchParams.toString()}`);
+  };
+
   return (
     <section
       style={{ background: "linear-gradient(to bottom, #E3E1F8, #FFFFFF)" }}
@@ -94,14 +123,14 @@ export default function Hero() {
 
                 {/* Enhanced Search Bar */}
                 <div className="w-full md:w-[352px] h-16 rounded-lg border-2 border-[#E0DEF7] bg-[#F7F7FD] relative group shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:border-[#7065F0]">
-                  <div className="flex items-center gap-4 absolute left-4 md:left-6 top-5">
+                  <div className="flex items-center gap-4 absolute left-4 md:left-6 top-3 right-4 md:right-6">
                     <svg
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="transition-all duration-200 group-hover:scale-105"
+                      className="transition-all duration-200 group-hover:scale-105 flex-shrink-0"
                     >
                       <path
                         d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
@@ -118,82 +147,83 @@ export default function Hero() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <span className="text-[#000929] text-base font-normal leading-[150%] opacity-50 transition-opacity duration-200 group-hover:opacity-70">
-                      Pesquisar imóvel
-                    </span>
+                    <Input
+                      placeholder="Pesquisar imóvel"
+                      value={filters.search}
+                      onChange={(e) =>
+                        setFilters({ ...filters, search: e.target.value })
+                      }
+                      className="border-0 bg-transparent text-[#000929] placeholder:text-[#000929] placeholder:opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0 h-auto p-0 text-base"
+                    />
                   </div>
                 </div>
               </div>
 
               {/* Enhanced Search Form */}
-              <div className="flex flex-col lg:flex-row w-full h-auto p-4 md:p-6 lg:p-10 items-start lg:items-center gap-4 md:gap-6 lg:gap-3 rounded-xl bg-white shadow-[0px_8px_40px_0px_rgba(0,0,0,0.20)] backdrop-blur-lg transition-all duration-300 hover:shadow-[0px_12px_50px_0px_rgba(0,0,0,0.25)] border border-white/20">
+              <div className="flex flex-col lg:flex-row w-full h-auto p-4 sm:p-6 lg:p-8 xl:p-10 items-start lg:items-center gap-4 sm:gap-6 lg:gap-4 xl:gap-3 rounded-xl bg-white shadow-[0px_8px_40px_0px_rgba(0,0,0,0.20)] backdrop-blur-lg transition-all duration-300 hover:shadow-[0px_12px_50px_0px_rgba(0,0,0,0.25)] border border-white/20">
                 {/* Categoria Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
-                  <div className="flex h-12 md:h-[50px] px-4 py-3 md:py-[9px] items-center gap-2 w-full rounded-md bg-[#F6F6F6] transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md cursor-pointer">
-                    <span className="flex-1 text-black font-montserrat text-sm md:text-base font-normal leading-5">
-                      Categoria
-                    </span>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 17 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M2.31267 4.64592C2.35911 4.59935 2.41429 4.56241 2.47503 4.5372C2.53578 4.512 2.6009 4.49902 2.66667 4.49902C2.73243 4.49902 2.79755 4.512 2.8583 4.5372C2.91904 4.56241 2.97422 4.59935 3.02067 4.64592L8.66667 10.2929L14.3127 4.64592C14.3592 4.59943 14.4143 4.56255 14.4751 4.53739C14.5358 4.51223 14.6009 4.49929 14.6667 4.49929C14.7324 4.49929 14.7975 4.51223 14.8582 4.53739C14.919 4.56255 14.9742 4.59943 15.0207 4.64592C15.0672 4.6924 15.104 4.74759 15.1292 4.80833C15.1543 4.86907 15.1673 4.93417 15.1673 4.99992C15.1673 5.06566 15.1543 5.13076 15.1292 5.1915C15.104 5.25224 15.0672 5.30743 15.0207 5.35392L9.02067 11.3539C8.97422 11.4005 8.91904 11.4374 8.8583 11.4626C8.79755 11.4878 8.73243 11.5008 8.66667 11.5008C8.6009 11.5008 8.53578 11.4878 8.47503 11.4626C8.41429 11.4374 8.35911 11.4005 8.31266 11.3539L2.31267 5.35392C2.2661 5.30747 2.22916 5.2523 2.20395 5.19155C2.17875 5.13081 2.16577 5.06568 2.16577 4.99992C2.16577 4.93415 2.17875 4.86903 2.20395 4.80828C2.22916 4.74754 2.2661 4.69236 2.31267 4.64592Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
+                  <Select
+                    value={filters.category}
+                    onValueChange={(value) =>
+                      setFilters({ ...filters, category: value })
+                    }
+                  >
+                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md">
+                      <SelectValue placeholder="Categoria" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="rent">Alugar</SelectItem>
+                      <SelectItem value="buy">Comprar</SelectItem>
+                      <SelectItem value="sell">Vender</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 {/* Tipo de Imovel Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
-                  <div className="flex h-12 md:h-[50px] px-4 py-3 md:py-[9px] items-center gap-2 w-full rounded-md bg-[#F6F6F6] transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md cursor-pointer">
-                    <span className="flex-1 text-black text-sm md:text-base font-normal leading-5">
-                      Tipo de imóvel
-                    </span>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 17 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M1.97917 4.64592C2.02561 4.59935 2.08079 4.56241 2.14154 4.5372C2.20228 4.512 2.2674 4.49902 2.33317 4.49902C2.39894 4.49902 2.46406 4.512 2.5248 4.5372C2.58555 4.56241 2.64072 4.59935 2.68717 4.64592L8.33317 10.2929L13.9792 4.64592C14.0257 4.59943 14.0808 4.56255 14.1416 4.53739C14.2023 4.51223 14.2674 4.49929 14.3332 4.49929C14.3989 4.49929 14.464 4.51223 14.5248 4.53739C14.5855 4.56255 14.6407 4.59943 14.6872 4.64592C14.7337 4.6924 14.7705 4.74759 14.7957 4.80833C14.8209 4.86907 14.8338 4.93417 14.8338 4.99992C14.8338 5.06566 14.8209 5.13076 14.7957 5.1915C14.7705 5.25224 14.7337 5.30743 14.6872 5.35392L8.68717 11.3539C8.64072 11.4005 8.58555 11.4374 8.5248 11.4626C8.46406 11.4878 8.39894 11.5008 8.33317 11.5008C8.2674 11.5008 8.20228 11.4878 8.14154 11.4626C8.08079 11.4374 8.02561 11.4005 7.97917 11.3539L1.97917 5.35392C1.93261 5.30747 1.89566 5.2523 1.87046 5.19155C1.84525 5.13081 1.83228 5.06568 1.83228 4.99992C1.83228 4.93415 1.84525 4.86903 1.87046 4.80828C1.89566 4.74754 1.93261 4.69236 1.97917 4.64592Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
+                  <Select
+                    value={filters.propertyType}
+                    onValueChange={(value) =>
+                      setFilters({ ...filters, propertyType: value })
+                    }
+                  >
+                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md">
+                      <SelectValue placeholder="Tipo de imóvel" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Apartamento">Apartamento</SelectItem>
+                      <SelectItem value="Casa">Casa</SelectItem>
+                      <SelectItem value="Loft">Loft</SelectItem>
+                      <SelectItem value="Studio">Studio</SelectItem>
+                      <SelectItem value="Comercial">Comercial</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 {/* Localização Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
-                  <div className="flex h-12 md:h-[50px] px-4 py-3 md:py-[9px] items-center gap-2 w-full rounded-md bg-[#F6F6F6] transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md cursor-pointer">
-                    <span className="flex-1 text-black font-montserrat text-sm md:text-base font-normal leading-5">
-                      Localização
-                    </span>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M1.64592 4.64592C1.69236 4.59935 1.74754 4.56241 1.80828 4.5372C1.86903 4.512 1.93415 4.49902 1.99992 4.49902C2.06568 4.49902 2.13081 4.512 2.19155 4.5372C2.2523 4.56241 2.30747 4.59935 2.35392 4.64592L7.99992 10.2929L13.6459 4.64592C13.6924 4.59943 13.7476 4.56255 13.8083 4.53739C13.8691 4.51223 13.9342 4.49929 13.9999 4.49929C14.0657 4.49929 14.1308 4.51223 14.1915 4.53739C14.2522 4.56255 14.3074 4.59943 14.3539 4.64592C14.4004 4.6924 14.4373 4.74759 14.4624 4.80833C14.4876 4.86907 14.5005 4.93417 14.5005 4.99992C14.5005 5.06566 14.4876 5.13076 14.4624 5.1915C14.4373 5.25224 14.4004 5.30743 14.3539 5.35392L8.35392 11.3539C8.30747 11.4005 8.2523 11.4374 8.19155 11.4626C8.13081 11.4878 8.06568 11.5008 7.99992 11.5008C7.93415 11.5008 7.86903 11.4878 7.80828 11.4626C7.74754 11.4374 7.69236 11.4005 7.64592 11.3539L1.64592 5.35392C1.59935 5.30747 1.56241 5.2523 1.5372 5.19155C1.512 5.13081 1.49902 5.06568 1.49902 4.99992C1.49902 4.93415 1.512 4.86903 1.5372 4.80828C1.56241 4.74754 1.59935 4.69236 1.64592 4.64592Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
+                  <Select
+                    value={filters.location}
+                    onValueChange={(value) =>
+                      setFilters({ ...filters, location: value })
+                    }
+                  >
+                    <SelectTrigger className="h-12 md:h-[50px] px-4 bg-[#F6F6F6] border-none font-montserrat text-sm md:text-base transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md">
+                      <SelectValue placeholder="Localização" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="São Paulo">São Paulo</SelectItem>
+                      <SelectItem value="Rio de Janeiro">
+                        Rio de Janeiro
+                      </SelectItem>
+                      <SelectItem value="Belo Horizonte">
+                        Belo Horizonte
+                      </SelectItem>
+                      <SelectItem value="Curitiba">Curitiba</SelectItem>
+                      <SelectItem value="Porto Alegre">Porto Alegre</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 {/* Filter Icon */}
@@ -212,7 +242,10 @@ export default function Hero() {
                 </svg>
 
                 {/* Enhanced Search Button */}
-                <button className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-[0px_8px_25px_0px_rgba(94,17,119,0.4)] hover:scale-105 active:scale-95 group">
+                <button
+                  onClick={handleSearch}
+                  className="flex w-full lg:w-[160px] h-12 md:h-[50px] px-5 py-2 justify-center items-center gap-3 rounded-md bg-homeflip-purple cursor-pointer transition-all duration-300 hover:bg-homeflip-purple/90 hover:shadow-[0px_8px_25px_0px_rgba(74,13,95,0.4)] hover:scale-105 active:scale-95 group"
+                >
                   <svg
                     width="24"
                     height="24"

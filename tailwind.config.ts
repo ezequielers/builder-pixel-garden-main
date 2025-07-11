@@ -35,8 +35,8 @@ export default {
       },
       colors: {
         homeflip: {
-          purple: "#5e1177",
-          violet: "#7065F0",
+          purple: "#4a0d5f", // Darker purple for better contrast
+          violet: "#5d52d4", // Darker violet for better contrast
           navy: "#100A55",
           green: "#8eda53",
           gradient: {

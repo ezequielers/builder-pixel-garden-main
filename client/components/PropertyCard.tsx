@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getApproximateLocation } from "@/lib/privacy";
 
 interface PropertyCardProps {
   property: {
@@ -74,9 +75,9 @@ export default function PropertyCard({ property }: PropertyCardProps) {
             {property.title}
           </h3>
           <p className="text-gray-600 font-inter text-xs sm:text-sm mb-2 sm:mb-3 line-clamp-2 flex-1">
-            {property.address}
+            {getApproximateLocation(property.address)}
           </p>
-          <div className="text-base sm:text-lg lg:text-xl font-bold text-homeflip-purple font-inter mb-3 sm:mb-4 truncate">
+          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-homeflip-purple font-inter mb-3 sm:mb-4 truncate">
             {property.price}
           </div>
 

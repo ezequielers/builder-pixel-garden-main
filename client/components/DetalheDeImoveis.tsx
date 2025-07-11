@@ -135,7 +135,7 @@ export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
             <div className="flex flex-col gap-3 md:gap-4">
               {/* Status Badge */}
               <div className="inline-flex w-fit">
-                <Badge               
+                <Badge
                   style={{
                     background: "#9653DA",
                     fontSize: "18px",
@@ -144,7 +144,8 @@ export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
                     paddingLeft: "30px",
                     paddingRight: "30px",
                   }}
-               className=" text-white px-3 md:px-4 lg:px-5 py-1.5 md:py-2 rounded-md text-xs md:text-sm font-medium font-gantari">
+                  className=" text-white px-3 md:px-4 lg:px-5 py-1.5 md:py-2 rounded-md text-xs md:text-sm font-medium font-gantari"
+                >
                   {currentProperty.status}
                 </Badge>
                 <Badge
@@ -271,15 +272,6 @@ export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
                       </span>
                     </div>
                   </div>
-
-                  {/* Mapa */}
-                  <div className="bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4">
-                    <div className="text-center text-gray-600">
-                      <MapPin className="w-8 h-8 mx-auto mb-2" />
-                      <p className="text-sm">Localização exata</p>
-                      <p className="text-xs">Disponível após interesse</p>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -297,7 +289,8 @@ export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
                   <div className="space-y-2">
                     <Button
                       onClick={() => handleScheduleVisit("presencial")}
-                      className="w-full bg-homeflip-purple hover:bg-homeflip-purple/90"
+                      variant="rental"
+                      className="w-full"
                       size="lg"
                     >
                       <Calendar className="w-5 h-5 mr-2" />

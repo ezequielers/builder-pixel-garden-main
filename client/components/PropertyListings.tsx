@@ -188,7 +188,7 @@ export default function PropertyListings() {
         <div className="text-center" style={{ marginBottom: "80px" }}>
           <Link
             to="/imoveis"
-            className="inline-block bg-homeflip-purple text-white px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300 hover:bg-[#4A0D5F] hover:shadow-lg hover:scale-105"
+            className="inline-block bg-homeflip-purple text-white px-6 py-3 rounded-lg font-medium text-sm transition-all duration-300 hover:bg-homeflip-purple/90 hover:shadow-lg hover:scale-105"
           >
             Ver mais imóveis
           </Link>

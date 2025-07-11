@@ -30,20 +30,20 @@ export default function Footer() {
       ],
     },
     {
+      title: "Legal",
+      links: [
+        { text: "Termos de serviço", href: "#" },
+        { text: "Política de privacidade", href: "#" },
+        { text: "Confiança e segurança", href: "#" },
+      ],
+    },
+    {
       title: "Sobre",
       links: [
         { text: "Nossa empresa", href: "/sobre" },
         { text: "Contato", href: "/contato" },
         { text: "Parceiros", href: "#" },
         { text: "Carreiras", href: "#" },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        { text: "Termos de serviço", href: "#" },
-        { text: "Política de privacidade", href: "#" },
-        { text: "Confiança e segurança", href: "#" },
       ],
     },
   ];
@@ -69,7 +69,7 @@ export default function Footer() {
                 `}
               >
                 <h3
-                  className="text-white font-telegraf text-xs sm:text-sm lg:text-sm
+                  className="text-white font-telegraf text-sm sm:text-base lg:text-lg
                              font-bold tracking-wide leading-tight
                              mb-4 sm:mb-5 md:mb-6"
                 >
@@ -98,19 +98,21 @@ export default function Footer() {
           </div>
 
           {/* Contact Info - Menor */}
-          <div className="lg:w-1/5 mt-8 md:mt-0">
+          <div className="lg:w-1/4 mt-8 md:mt-0">
             <div className="mb-6 md:mb-8">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/60e6bae0822dc21884ab2d8baa890b681dd5b38f?width=295"
                 alt="HomeFlip - Sua imobiliária de confiança"
-                className="w-32 sm:w-36 md:w-32 lg:w-[120px] h-auto"
+                className="w-32 sm:w-36 md:w-32 lg:w-[140px] h-auto"
                 loading="lazy"
               />
             </div>
 
-            <div className="text-white/70 text-xs md:text-sm leading-relaxed">
-              <p className="font-medium text-white mb-2">Endereço:</p>
-              <div className="space-y-1">
+            <div className="text-white/70 text-sm md:text-base leading-relaxed">
+              <p className="font-medium text-white mb-3 text-base md:text-lg">
+                Endereço:
+              </p>
+              <div className="space-y-1.5">
                 <p>Avenida João Gualberto 1342</p>
                 <p>Sala 505, Andar 05</p>
                 <p>Cond Urban Office e Hotel</p>

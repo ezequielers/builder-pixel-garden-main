@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PropertyCard from "../components/PropertyCard";
@@ -163,6 +164,7 @@ const mockProperties: Property[] = [
 ];
 
 export default function Imoveis() {
+  const [searchParams] = useSearchParams();
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [showFilters, setShowFilters] = useState(false);
   const [sortBy, setSortBy] = useState("price-asc");
@@ -180,6 +182,25 @@ export default function Imoveis() {
     garages: "",
     amenities: [],
   });
+
+  // Handle URL parameters from Hero search
+  useEffect(() => {
+    const search = searchParams.get("search") || "";
+    const type = searchParams.get("type") || "";
+    const location = searchParams.get("location") || "";
+    const category = searchParams.get("category") || "";
+
+    setFilters((prev) => ({
+      ...prev,
+      search,
+      propertyType: type,
+      city: location,
+    }));
+
+    if (search || type || location || category) {
+      setShowFilters(true);
+    }
+  }, [searchParams]);
 
   const propertyTypes = [
     "Apartamento",
@@ -575,7 +596,7 @@ export default function Imoveis() {
                   <SelectItem value="price-asc">Menor preço</SelectItem>
                   <SelectItem value="price-desc">Maior preço</SelectItem>
                   <SelectItem value="area-asc">Menor área</SelectItem>
-                  <SelectItem value="area-desc">Maior área</SelectItem>
+                  <SelectItem value="area-desc">Maior ��rea</SelectItem>
                   <SelectItem value="bedrooms-desc">Mais quartos</SelectItem>
                 </SelectContent>
               </Select>

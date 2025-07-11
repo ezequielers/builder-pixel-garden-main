@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  maskOwnerName,
+  maskPropertyAddress,
+  canViewSensitiveInfo,
+  PRIVACY_NOTICES,
+} from "@/lib/privacy";
 import {
   ArrowLeft,
   Heart,
@@ -105,6 +112,10 @@ export default function DetalheImovel() {
   const { id } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
+
+  // Privacy protection
+  const appointmentStatus = canViewSensitiveInfo(id || "1", "current-user-id");
+  const hasConfirmedAppointment = appointmentStatus.appointmentConfirmed;
 
   // In a real app, you would fetch the property data based on the ID
   const property = mockProperty;
@@ -220,8 +231,18 @@ export default function DetalheImovel() {
                       </h1>
                       <div className="flex items-center text-gray-600 mb-4">
                         <MapPin className="w-4 h-4 mr-1" />
-                        {property.address}
+                        {maskPropertyAddress(
+                          property.address,
+                          hasConfirmedAppointment,
+                        )}
                       </div>
+                      {!hasConfirmedAppointment && (
+                        <Alert className="mb-4">
+                          <AlertDescription className="text-sm">
+                            {PRIVACY_NOTICES.exactAddress}
+                          </AlertDescription>
+                        </Alert>
+                      )}
                     </div>
                     <div className="flex gap-2">
                       <Button
@@ -347,9 +368,17 @@ export default function DetalheImovel() {
                     />
                     <div>
                       <div className="font-semibold">
-                        {property.ownerInfo.name}
+                        {maskOwnerName(
+                          property.ownerInfo.name,
+                          hasConfirmedAppointment,
+                        )}
                       </div>
                       <div className="text-sm text-gray-600">Proprietário</div>
+                      {!hasConfirmedAppointment && (
+                        <div className="text-xs text-homeflip-purple mt-1">
+                          Nome completo após agendamento
+                        </div>
+                      )}
                     </div>
                   </div>
 
