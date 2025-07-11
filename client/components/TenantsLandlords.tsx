@@ -31,7 +31,7 @@ export default function TenantsLandlords() {
           </svg>
         </div>
       ),
-      title: "Visita Virtual à Casa",
+      title: "Visita virtual à casa",
       description:
         "Você pode se comunicar diretamente com os proprietários e nós lhe forneceremos um tour virtual antes de comprar ou alugar o imóvel.",
       bgColor: "bg-white",
@@ -60,7 +60,7 @@ export default function TenantsLandlords() {
           </svg>
         </div>
       ),
-      title: "Encontre o Melhor Negócio",
+      title: "Encontre o melhor negócio",
       description:
         "Navegue por milhares de imóveis, salve seus favoritos e configure alertas de pesquisa para não perder a melhor oferta de imóvel!",
       bgColor: "bg-white bg-opacity-20",
@@ -114,7 +114,7 @@ export default function TenantsLandlords() {
           </svg>
         </div>
       ),
-      title: "Prepare-se Para se Inscrever",
+      title: "Prepare-se para se inscrever",
       description:
         "Encontrou a casa dos seus sonhos? Você só precisa de um pouco de esforço e pode começar a se mudar para a sua nova casa dos sonhos!",
       bgColor: "bg-[#4A3FBF]",
@@ -158,22 +158,22 @@ export default function TenantsLandlords() {
         </div>
 
         {/* Features */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-20">
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className={`rounded-lg p-8 h-48 relative transition-all duration-300 hover:scale-105 ${feature.bgColor}`}
+              className={`rounded-lg p-4 md:p-6 lg:p-8 h-auto min-h-[200px] md:h-48 relative transition-all duration-300 hover:scale-105 zoom-responsive ${feature.bgColor}`}
             >
-              <div className="flex items-start gap-6 h-full">
+              <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 h-full">
                 <div className="flex-shrink-0">{feature.icon}</div>
-                <div className="flex flex-col justify-center h-full">
+                <div className="flex flex-col justify-center h-full min-w-0 flex-1">
                   <h3
-                    className={`text-xl font-bold leading-tight tracking-tight mb-4 ${feature.textColor}`}
+                    className={`text-lg md:text-xl font-bold leading-tight tracking-tight mb-3 md:mb-4 ${feature.textColor} zoom-responsive`}
                   >
                     {feature.title}
                   </h3>
                   <p
-                    className={`font-light text-sm leading-relaxed ${
+                    className={`font-light text-sm md:text-sm leading-relaxed zoom-responsive ${
                       feature.textColor === "text-white"
                         ? "text-white opacity-70"
                         : "text-gray-600"
