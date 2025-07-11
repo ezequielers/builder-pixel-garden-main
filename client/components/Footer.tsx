@@ -76,7 +76,7 @@ export default function Footer() {
             </div>
             <div className="max-w-sm lg:max-w-xs xl:max-w-sm">
               <p
-                className="text-white/80 font-inter text-sm md:text-base
+                className="text-white/80 font-source-code-pro text-sm md:text-base
                            leading-relaxed lg:leading-loose"
               >
                 Somos especialistas em conectar pessoas aos seus lares ideais.
@@ -101,7 +101,7 @@ export default function Footer() {
                 `}
                 >
                   <h3
-                    className="text-white font-jakarta text-xs sm:text-sm lg:text-sm
+                    className="text-white font-telegraf text-xs sm:text-sm lg:text-sm
                                font-bold tracking-wide leading-tight
                                mb-4 sm:mb-5 md:mb-6"
                   >
@@ -113,7 +113,7 @@ export default function Footer() {
                         <a
                           href={link.href}
                           className="text-white/70 hover:text-white
-                                   font-inter text-sm md:text-base
+                                   font-source-code-pro text-sm md:text-base
                                    transition-colors duration-200 ease-out
                                    hover:underline decoration-1 underline-offset-2
                                    focus:outline-none focus:text-white focus:underline
@@ -135,7 +135,7 @@ export default function Footer() {
                 {footerSections.slice(4).map((section) => (
                   <div key={section.title}>
                     <h3
-                      className="text-white font-jakarta text-xs font-bold
+                      className="text-white font-telegraf text-xs font-bold
                                  tracking-wide leading-tight mb-4"
                     >
                       {section.title}
@@ -146,7 +146,7 @@ export default function Footer() {
                           <a
                             href={link.href}
                             className="text-white/70 hover:text-white
-                                     font-inter text-sm transition-colors duration-200
+                                     font-source-code-pro text-sm transition-colors duration-200
                                      hover:underline decoration-1 underline-offset-2
                                      block py-1"
                           >
@@ -172,7 +172,7 @@ export default function Footer() {
         >
           <div className="text-center sm:text-left">
             <p
-              className="text-white/60 font-inter text-sm md:text-base
+              className="text-white/60 font-source-code-pro text-sm md:text-base
                         leading-relaxed"
             >
               ©{new Date().getFullYear()} HomeFlip. Todos os direitos

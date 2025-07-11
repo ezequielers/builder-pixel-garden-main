@@ -71,7 +71,7 @@ export default function TenantsLandlords() {
           >
             <path
               d="M28 9.33329V22.6666C28 26.6666 26 29.3333 21.3333 29.3333H10.6667C6 29.3333 4 26.6666 4 22.6666V9.33329C4 5.33329 6 2.66663 10.6667 2.66663H21.3333C26 2.66663 28 5.33329 28 9.33329Z"
-              stroke="#7065F0"
+              stroke="#4A3FBF"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -79,7 +79,7 @@ export default function TenantsLandlords() {
             />
             <path
               d="M19.3333 6V8.66667C19.3333 10.1333 20.5333 11.3333 21.9999 11.3333H24.6666"
-              stroke="#7065F0"
+              stroke="#4A3FBF"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -87,7 +87,7 @@ export default function TenantsLandlords() {
             />
             <path
               d="M10.6667 17.3334H16.0001"
-              stroke="#7065F0"
+              stroke="#4A3FBF"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -95,7 +95,7 @@ export default function TenantsLandlords() {
             />
             <path
               d="M10.6667 22.6666H21.3334"
-              stroke="#7065F0"
+              stroke="#4A3FBF"
               strokeWidth="3"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -107,7 +107,7 @@ export default function TenantsLandlords() {
       title: "Prepare-se para se inscrever",
       description:
         "Encontre a casa dos seus sonhos? Você só precisa de um pouco de esforço e pode começar a se mudar para a sua nova casa dos sonhos!",
-      bgColor: "bg-homeflip-violet",
+      bgColor: "bg-[#4A3FBF]",
       textColor: "text-white",
     },
   ];
@@ -128,20 +128,20 @@ export default function TenantsLandlords() {
   ];
 
   return (
-    <section className="w-full bg-homeflip-navy py-12 md:py-16 lg:py-20 shadow-[0px_4px_200px_0px_rgba(232,249,247,0.20)] overflow-hidden">
+    <section className="w-full bg-[#0D0A3E] py-16 md:py-20 lg:py-24 shadow-[0px_4px_200px_0px_rgba(232,249,247,0.20)] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Headline */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 md:gap-10 mb-16 md:mb-20">
           <div className="lg:max-w-[501px]">
-            <h2 className="text-white font-inter text-xl md:text-2xl lg:text-3xl font-bold leading-tight mb-0">
+            <h2 className="text-white font-telegraf text-xl md:text-2xl lg:text-3xl font-bold leading-tight mb-0">
               <span>Nós facilitamos para </span>
-              <span className="text-homeflip-violet">inquilinos</span>
+              <span className="text-[#4A3FBF]">inquilinos</span>
               <span> e </span>
-              <span className="text-homeflip-violet">proprietários.</span>
+              <span className="text-[#4A3FBF]">proprietários.</span>
             </h2>
           </div>
           <div className="lg:max-w-[406px]">
-            <p className="text-white font-inter text-sm md:text-base font-normal leading-relaxed opacity-70">
+            <p className="text-white font-source-code-pro text-sm md:text-base font-normal leading-relaxed opacity-70">
               Seja para vender seu imóvel atual, obter financiamento ou comprar
               um novo, nós tornamos tudo fácil e eficiente. E a melhor parte?
               Você economizará muito tempo e dinheiro com nossos serviços.
@@ -150,7 +150,7 @@ export default function TenantsLandlords() {
         </div>
 
         {/* Features */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12 mb-20">
           {features.map((feature, index) => (
             <div
               key={feature.id}
@@ -160,12 +160,12 @@ export default function TenantsLandlords() {
                 <div className="flex-shrink-0">{feature.icon}</div>
                 <div className="flex flex-col justify-center h-full">
                   <h3
-                    className={`font-jakarta text-xl font-bold leading-tight tracking-tight mb-4 ${feature.textColor}`}
+                    className={`font-telegraf text-xl font-bold leading-tight tracking-tight mb-4 ${feature.textColor}`}
                   >
                     {feature.title}
                   </h3>
                   <p
-                    className={`font-jakarta text-sm leading-relaxed ${
+                    className={`font-source-code-pro text-sm leading-relaxed ${
                       feature.textColor === "text-white"
                         ? "text-white opacity-70"
                         : "text-gray-600"
@@ -180,16 +180,16 @@ export default function TenantsLandlords() {
         </div>
 
         {/* Separator Line */}
-        <div className="w-full h-px bg-[#312F4B] mb-16" />
+        <div className="w-full h-px bg-[#312F4B] mb-20" />
 
         {/* Stats */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-white font-jakarta text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-2">
+              <div className="text-white font-telegraf text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-2">
                 {stat.number}
               </div>
-              <div className="text-white font-jakarta text-sm font-medium leading-relaxed opacity-70 max-w-60">
+              <div className="text-white font-source-code-pro text-sm font-medium leading-relaxed opacity-70 max-w-60">
                 {stat.label}
               </div>
               {index < stats.length - 1 && (

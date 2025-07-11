@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Imóveis", href: "/imoveis" },
-  { name: "Sobre nós", href: "/sobre" },
+  { name: "Fazer Proposta", href: "/proposta" },
   { name: "Contato", href: "/contato" },
 ];
 

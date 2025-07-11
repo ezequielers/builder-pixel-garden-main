@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section   style={{background: 'linear-gradient(to bottom, #E3E1F8, #FFFFFF)'}} className="relative w-full min-h-[500px] sm:min-h-[600px] lg:h-[730px] bg-white shadow-[0px_4px_200px_0px_rgba(232,249,247,0.20)] overflow-hidden">
+    <section
+      style={{ background: "linear-gradient(to bottom, #E3E1F8, #FFFFFF)" }}
+      className="relative w-full min-h-[500px] sm:min-h-[600px] lg:h-[730px] bg-white shadow-[0px_4px_200px_0px_rgba(232,249,247,0.20)] overflow-hidden"
+    >
       {/* Enhanced Gradient Background */}
       <div
         className="absolute inset-0 w-full h-full"
@@ -16,7 +19,7 @@ export default function Hero() {
         <div className="flex flex-col items-center">
           {/* Hero Image and Text Section */}
           <div
-            className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
+            className="w-full h-[900px] sm:h-[900px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
             style={{
               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('https://cdn.builder.io/api/v1/image/assets/TEMP/083e6f86a30d3717f17cc5dcf1c69d289b5aabe3?width=2592') center/cover no-repeat`,
             }}
@@ -25,25 +28,31 @@ export default function Hero() {
             <div className="absolute left-4 sm:left-8 lg:left-[72px] top-[30px] sm:top-[40px] lg:top-[141px] right-4 sm:right-8 lg:right-auto">
               <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg">
                 {/* Main Headline */}
-                <h1 className="text-white font-gantari text-xl md:text-3xl lg:text-4xl font-bold leading-tight" style={{fontSize: '60px', lineHeight: '50px'}}>
-                  Encontre o Imóvel perfeito para seu estilo de vida!
+                <h1
+                  className="text-white font-telegraf text-xl md:text-3xl lg:text-4xl font-bold leading-tight"
+                  style={{ fontSize: "60px", lineHeight: "50px" }}
+                >
+                  Encontre o imóvel perfeito para seu estilo de vida!
                 </h1>
 
                 {/* Description */}
-                <p className="text-white font-inter text-sm md:text-base font-normal leading-relaxed max-w-md">
+                {/* <p className="text-white font-inter text-sm md:text-base font-normal leading-relaxed max-w-md">
                   Lorem ipsum dolor sit amet consectetur. Nec risus quis viverra
                   libero tellus eget. Leo morbi faucibus mattis pharetra tellus
                   velit ultricies duis rhoncus. Porttitor fermentum eu urna eget
-                </p>
+                </p> */}
               </div>
             </div>
 
             {/* Search Controls Section */}
-            <div className="absolute left-4 md:left-[72px] bottom-4 md:top-[475px] right-4 md:right-auto md:w-[1076px]">
+            <div className="absolute left-4 md:left-[72px] bottom-4 md:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px]">
               {/* Search Control Bar */}
-              <div className="flex flex-col md:flex-row gap-3 mb-4" style={{ marginTop: -20 }}>
+              <div
+                className="flex flex-col md:flex-row gap-3 mb-4"
+                style={{ marginTop: -20 }}
+              >
                 {/* Alugar Button (Single Option) */}
-                <div className="inline-flex p-2 pl-4 md:pl-8 justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
+                <div className="inline-flex p-2 justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
                   <div className="w-full md:w-[250px] h-12 relative group">
                     <div className="w-full md:w-[250px] h-12 rounded-md border-2 border-[#E0DEF7] bg-white shadow-[0px_8px_50px_0px_rgba(14,8,84,0.15)] absolute transition-all duration-300 group-hover:shadow-[0px_12px_60px_0px_rgba(14,8,84,0.25)]" />
                     <div className="flex items-center gap-3 absolute left-4 md:left-[77px] top-[11px]">
@@ -57,7 +66,7 @@ export default function Hero() {
                       >
                         <path
                           d="M16.4917 12.4416C14.775 14.1499 12.3167 14.6749 10.1584 13.9999L6.23337 17.9166C5.95004 18.2083 5.39171 18.3833 4.99171 18.3249L3.17504 18.0749C2.57504 17.9916 2.01671 17.4249 1.92504 16.8249L1.67504 15.0083C1.61671 14.6083 1.80837 14.0499 2.08337 13.7666L6.00004 9.84994C5.33337 7.68327 5.85004 5.22494 7.56671 3.5166C10.025 1.05827 14.0167 1.05827 16.4834 3.5166C18.95 5.97494 18.95 9.98327 16.4917 12.4416Z"
-                          stroke="#7065F0"
+                          stroke="#3A2A72"
                           strokeWidth="2"
                           strokeMiterlimit="10"
                           strokeLinecap="round"
@@ -65,7 +74,7 @@ export default function Hero() {
                         />
                         <path
                           d="M5.7417 14.575L7.65837 16.4916"
-                          stroke="#7065F0"
+                          stroke="#3A2A72"
                           strokeWidth="2"
                           strokeMiterlimit="10"
                           strokeLinecap="round"
@@ -73,13 +82,13 @@ export default function Hero() {
                         />
                         <path
                           d="M12.0833 9.16675C12.7736 9.16675 13.3333 8.6071 13.3333 7.91675C13.3333 7.22639 12.7736 6.66675 12.0833 6.66675C11.3929 6.66675 10.8333 7.22639 10.8333 7.91675C10.8333 8.6071 11.3929 9.16675 12.0833 9.16675Z"
-                          stroke="#7065F0"
+                          stroke="#3A2A72"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
                       </svg>
-                      <span className="text-[#7065F0] font-jakarta text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#5E1177]">
+                      <span className="text-[#3A2A72] font-telegraf text-lg font-bold leading-[145%] tracking-[-0.09px] transition-all duration-200 group-hover:text-[#2A1A5F]">
                         Alugar
                       </span>
                     </div>
@@ -99,20 +108,20 @@ export default function Hero() {
                     >
                       <path
                         d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-                        stroke="#7065F0"
+                        stroke="#3A2A72"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                       <path
                         d="M22 22L20 20"
-                        stroke="#7065F0"
+                        stroke="#3A2A72"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <span className="text-[#000929] font-jakarta text-base font-normal leading-[150%] opacity-50 transition-opacity duration-200 group-hover:opacity-70">
+                    <span className="text-[#000929] font-source-code-pro text-base font-normal leading-[150%] opacity-50 transition-opacity duration-200 group-hover:opacity-70">
                       Pesquisar Imóvel
                     </span>
                   </div>
@@ -124,7 +133,7 @@ export default function Hero() {
                 {/* Categoria Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
                   <div className="flex h-12 md:h-[50px] px-4 py-3 md:py-[9px] items-center gap-2 w-full rounded-md bg-[#F6F6F6] transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md cursor-pointer">
-                    <span className="flex-1 text-black font-inter text-sm md:text-base font-normal leading-5">
+                    <span className="flex-1 text-black font-source-code-pro text-sm md:text-base font-normal leading-5">
                       Categoria
                     </span>
                     <svg
@@ -147,7 +156,7 @@ export default function Hero() {
                 {/* Tipo de Imovel Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
                   <div className="flex h-12 md:h-[50px] px-4 py-3 md:py-[9px] items-center gap-2 w-full rounded-md bg-[#F6F6F6] transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md cursor-pointer">
-                    <span className="flex-1 text-black font-inter text-sm md:text-base font-normal leading-5">
+                    <span className="flex-1 text-black font-source-code-pro text-sm md:text-base font-normal leading-5">
                       Tipo de Imovel
                     </span>
                     <svg
@@ -170,7 +179,7 @@ export default function Hero() {
                 {/* Localização Select */}
                 <div className="flex flex-col items-start gap-2 w-full lg:flex-1 group">
                   <div className="flex h-12 md:h-[50px] px-4 py-3 md:py-[9px] items-center gap-2 w-full rounded-md bg-[#F6F6F6] transition-all duration-200 hover:bg-[#E0DEF7] hover:shadow-md cursor-pointer">
-                    <span className="flex-1 text-black font-inter text-sm md:text-base font-normal leading-5">
+                    <span className="flex-1 text-black font-source-code-pro text-sm md:text-base font-normal leading-5">
                       Localização
                     </span>
                     <svg
@@ -230,7 +239,7 @@ export default function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-white font-inter text-base font-normal leading-5 uppercase transition-all duration-200 group-hover:font-semibold group-hover:tracking-wider">
+                  <span className="text-white font-source-code-pro text-base font-normal leading-5 uppercase transition-all duration-200 group-hover:font-semibold group-hover:tracking-wider">
                     BUSCAR
                   </span>
                 </button>

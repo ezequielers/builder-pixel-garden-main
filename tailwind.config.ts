@@ -17,6 +17,8 @@ export default {
         gantari: ["Gantari", "sans-serif"],
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        telegraf: ["Space Grotesk", "sans-serif"],
+        "source-code-pro": ["Source Code Pro", "monospace"],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem" }],

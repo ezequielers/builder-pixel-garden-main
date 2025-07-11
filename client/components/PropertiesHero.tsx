@@ -13,7 +13,7 @@ export default function PropertiesHero() {
         <div className="flex flex-col items-center">
           {/* Hero Image and Text Section */}
           <div
-            className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
+            className="w-full h-[900px] sm:h-[900px] lg:h-[600px] rounded-t-lg md:rounded-t-xl relative"
             style={{
               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('https://cdn.builder.io/api/v1/image/assets/TEMP/c315d7c729228923023f4aada19b3faab896b120?width=2592') center/cover no-repeat`,
             }}
@@ -35,21 +35,21 @@ export default function PropertiesHero() {
                   </span>
                 </h1>
 
-                <p className="w-full max-w-[765px] text-white font-inter text-sm md:text-base font-normal leading-relaxed text-center">
+                {/* <p className="w-full max-w-[765px] text-white font-inter text-sm md:text-base font-normal leading-relaxed text-center">
                   Lorem ipsum dolor sit amet consectetur. Nec risus quis viverra
                   libero tellus eget. Leo morbi faucibus mattis pharetra tellus
                   velit ultricies duis rhoncus. Porttitor fermentum eu urna eget
-                </p>
+                </p> */}
               </div>
             </div>
 
 
             {/* Search Controls Section */}
-            <div className="absolute left-4 md:left-[60px] bottom-4 md:bottom-[-60px] right-4 md:right-auto md:w-[1076px]">
+            <div className="absolute left-4 md:left-[72px] bottom-4 md:top-[450px] right-4 md:right-auto lg:w-[860px] xl:w-[1076px]">
               {/* Search Control Bar */}
               <div className="flex flex-col md:flex-row gap-3 mb-4 md:mb-[20px]">
                 {/* Alugar Button (Single Option) */}
-                <div className="inline-flex p-2 pl-4 md:pl-8 justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
+                <div className="inline-flex p-2 justify-start items-center rounded-lg border-[1.5px] border-[#E0DEF7] bg-[#F0EFFB] backdrop-blur-sm shadow-lg">
                   <div className="w-full md:w-[250px] h-12 relative group">
                     <div className="w-full md:w-[250px] h-12 rounded-md border-2 border-[#E0DEF7] bg-white shadow-[0px_8px_50px_0px_rgba(14,8,84,0.15)] absolute transition-all duration-300 group-hover:shadow-[0px_12px_60px_0px_rgba(14,8,84,0.25)]" />
                     <div className="flex items-center gap-3 absolute left-4 md:left-[77px] top-[11px]">

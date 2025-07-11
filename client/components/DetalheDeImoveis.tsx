@@ -1,4 +1,30 @@
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import {
+  MapPin,
+  Bed,
+  Bath,
+  Car,
+  Square,
+  Heart,
+  Calendar,
+  MessageCircle,
+  HandHeart,
+  Star,
+  PawPrint,
+  Wifi,
+  Car as ParkingIcon,
+  Shield,
+  DollarSign,
+  Clock,
+  Users,
+  Video,
+  Eye,
+} from "lucide-react";
 
 interface DetalheDeImoveisProps {
   property?: {
@@ -14,154 +40,362 @@ interface DetalheDeImoveisProps {
     bathrooms: number;
     area: number;
     garages: number;
+    cashback?: string;
+    highlights?: Array<{
+      text: string;
+      icon: any;
+      color: string;
+    }>;
+    taxes?: {
+      condominio: string;
+      iptu: string;
+    };
   };
 }
 
 export default function DetalheDeImoveis({ property }: DetalheDeImoveisProps) {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const [isSaved, setIsSaved] = useState(false);
 
-  // Mock property data based on Figma design
+  // Mock property data seguindo o fluxo HomeFlip
   const mockProperty = {
     id: parseInt(id || "1"),
     status: "Para Alugar",
-    title: "Incrível apartamento moderno",
-    address: "43 W. Wellington Road Fairhope, AL 36532",
-    price: "$120.000",
-    pricePerSqft: "$1200/sq.ft",
+    title: "Apartamento moderno no centro",
+    address: "Rua Augusta, 1200 - Consolação, São Paulo - SP",
+    price: "R$ 2.800",
+    pricePerSqft: "R$ 37/m²",
+    cashback: "R$ 140",
+    taxes: {
+      condominio: "R$ 450",
+      iptu: "R$ 180",
+    },
     image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/f9d104d65bad4566f22b937d345ae17f91f3fc5a?width=1712",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
     gallery: [
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/c1f437e0c04a5d9d800cbcfb9181ac12f418a6b5?width=832",
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/f8ae3cfa1201eb1697b835085a65187fb906f1c4?width=832",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-61dc36dc98c8?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560449752-8b6b7b7d9e44?w=400&h=300&fit=crop",
     ],
-    bedrooms: 3,
+    bedrooms: 2,
     bathrooms: 2,
-    area: 150,
+    area: 75,
     garages: 1,
+    highlights: [
+      {
+        icon: PawPrint,
+        text: "Aceita pets",
+        color: "bg-green-100 text-green-700",
+      },
+      { icon: Wifi, text: "Mobiliado", color: "bg-blue-100 text-blue-700" },
+      {
+        icon: ParkingIcon,
+        text: "Vaga coberta",
+        color: "bg-purple-100 text-purple-700",
+      },
+      {
+        icon: Shield,
+        text: "Portaria 24h",
+        color: "bg-orange-100 text-orange-700",
+      },
+    ],
+    location: {
+      lat: -23.5505,
+      lng: -46.6333,
+    },
   };
 
   const currentProperty = property || mockProperty;
 
+  const handleSave = () => {
+    setIsSaved(!isSaved);
+  };
+
+  const handleScheduleVisit = (type: "presencial" | "video") => {
+    navigate(`/agendar-visita?imovel=${currentProperty.id}&tipo=${type}`);
+  };
+
+  const handleContactSpecialist = () => {
+    // Simular abertura do chat
+    alert("Chat com especialista HomeFlip será aberto!");
+  };
+
+  const handleSendProposal = () => {
+    navigate(`/proposta-expressa?imovel=${currentProperty.id}`);
+  };
+
   return (
-    <div className="w-full bg-white py-8 md:py-12 lg:py-16">
+    <div className="w-full bg-gray-50 py-6 md:py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <div className="flex flex-col gap-4 md:gap-6 mb-6 md:mb-8 lg:mb-12">
-          {/* Status Badge and Price Row */}
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 md:gap-6">
-            <div className="flex flex-col gap-3 md:gap-4">
-              {/* Status Badge */}
-              <div className="inline-flex w-fit">
-                <span className="bg-green-500 text-white px-3 md:px-4 lg:px-5 py-1.5 md:py-2 rounded-md text-xs md:text-sm font-medium font-gantari">
+        {/* Header com informações principais */}
+        <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <Badge className="bg-green-100 text-green-700 hover:bg-green-100">
                   {currentProperty.status}
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-homeflip-purple/10 text-homeflip-purple border-homeflip-purple/20"
+                >
+                  <DollarSign className="w-3 h-3 mr-1" />
+                  Cashback: {currentProperty.cashback || "R$ 0"}
+                </Badge>
+              </div>
+
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                {currentProperty.title}
+              </h1>
+
+              <div className="flex items-center text-gray-600 mb-4">
+                <MapPin className="w-5 h-5 mr-2 flex-shrink-0" />
+                <span className="text-base md:text-lg">
+                  {currentProperty.address}
                 </span>
               </div>
 
-              {/* Title */}
-              <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-900 font-gantari leading-tight">
-                {currentProperty.title}
-              </h1>
-            </div>
-
-            {/* Price */}
-            <div className="text-left lg:text-right">
-              <div className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-black font-inter leading-tight">
-                {currentProperty.price}
+              {/* Destaques */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {(currentProperty.highlights || []).map((highlight, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${highlight.color}`}
+                  >
+                    <highlight.icon className="w-3 h-3" />
+                    {highlight.text}
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* Address and Price per sqft */}
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2 md:gap-4">
-            <p className="text-sm md:text-base lg:text-lg text-gray-600 font-inter">
-              {currentProperty.address}
-            </p>
-            <p className="text-sm md:text-base lg:text-lg text-gray-600 font-inter">
-              {currentProperty.pricePerSqft}
-            </p>
-          </div>
-        </div>
+            {/* Preços e ação de salvar */}
+            <div className="text-left lg:text-right">
+              <div className="flex items-center lg:justify-end gap-2 mb-2">
+                <span className="text-3xl md:text-4xl font-bold text-gray-900">
+                  {currentProperty.price}
+                </span>
+                <span className="text-lg text-gray-600">/mês</span>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleSave}
+                  className="ml-2"
+                >
+                  <Heart
+                    className={`w-5 h-5 ${isSaved ? "fill-red-500 text-red-500" : "text-gray-400"}`}
+                  />
+                </Button>
+              </div>
 
-        {/* Images Section */}
-        <div className="flex flex-col xl:flex-row gap-4 md:gap-6">
-          {/* Main Image */}
-          <div className="xl:flex-1">
-            <img
-              src={currentProperty.image}
-              alt={currentProperty.title}
-              className="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[544px] object-cover rounded-lg md:rounded-xl lg:rounded-2xl"
-            />
-          </div>
-
-          {/* Gallery Images */}
-          <div className="xl:w-[416px] flex flex-row xl:flex-col gap-4 md:gap-6">
-            {/* Show All Photos Button */}
-            <div
-              className="relative flex-1 xl:flex-none xl:h-[260px] h-32 sm:h-40 md:h-48 rounded-lg md:rounded-xl overflow-hidden cursor-pointer group"
-              style={{
-                backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.37) 0%, rgba(0,0,0,0.37) 100%), url(${currentProperty.gallery[0]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mx-auto mb-1 md:mb-2"
-                    viewBox="0 0 24 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M23 19.5C23 20.0304 22.7893 20.5391 22.4142 20.9142C22.0391 21.2893 21.5304 21.5 21 21.5H3C2.46957 21.5 1.96086 21.2893 1.58579 20.9142C1.21071 20.5391 1 20.0304 1 19.5V8.5C1 7.96957 1.21071 7.46086 1.58579 7.08579C1.96086 6.71071 2.46957 6.5 3 6.5H7L9 3.5H15L17 6.5H21C21.5304 6.5 22.0391 6.71071 22.4142 7.08579C22.7893 7.46086 23 7.96957 23 8.5V19.5Z"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 17.5C14.2091 17.5 16 15.7091 16 13.5C16 11.2909 14.2091 9.5 12 9.5C9.79086 9.5 8 11.2909 8 13.5C8 15.7091 9.79086 17.5 12 17.5Z"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <div className="text-sm md:text-base lg:text-lg font-bold font-gantari">
-                    Mostrar tudo
-                  </div>
-                  <div className="text-xs md:text-sm font-gantari">
-                    12 fotos
-                  </div>
+              <div className="text-sm text-gray-600 space-y-1 lg:text-right">
+                <div>
+                  Condomínio: {currentProperty.taxes?.condominio || "R$ 0"}
+                </div>
+                <div>IPTU: {currentProperty.taxes?.iptu || "R$ 0"}</div>
+                <div className="font-medium text-gray-500">
+                  {currentProperty.pricePerSqft}
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Map Image */}
-            <div
-              className="relative flex-1 xl:flex-none xl:h-[260px] h-32 sm:h-40 md:h-48 rounded-lg md:rounded-xl border border-gray-300 overflow-hidden cursor-pointer"
-              style={{
-                backgroundImage: `url(${currentProperty.gallery[1]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-                  viewBox="0 0 24 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M12 29.6666C12 29.6666 24 21.6666 24 12.3333C24 9.15065 22.7357 6.09841 20.4853 3.84797C18.2348 1.59753 15.1826 0.333252 12 0.333252C8.8174 0.333252 5.76515 1.59753 3.51472 3.84797C1.26428 6.09841 0 9.15065 0 12.3333C0 21.6666 12 29.6666 12 29.6666ZM16 12.3333C16 14.5424 14.2091 16.3333 12 16.3333C9.79086 16.3333 8 14.5424 8 12.3333C8 10.1241 9.79086 8.33325 12 8.33325C14.2091 8.33325 16 10.1241 16 12.3333Z"
-                    fill="#0057FF"
-                  />
-                </svg>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Galeria de imagens */}
+          <div className="lg:col-span-2">
+            <Card>
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {/* Imagem principal */}
+                  <div className="md:col-span-2 relative">
+                    <img
+                      src={currentProperty.image}
+                      alt={currentProperty.title}
+                      className="w-full h-64 md:h-80 object-cover rounded-t-xl"
+                    />
+                    <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                      1 / 8 fotos
+                    </div>
+                  </div>
+
+                  {/* Imagens menores */}
+                  {currentProperty.gallery.slice(0, 2).map((img, index) => (
+                    <div key={index} className="relative">
+                      <img
+                        src={img}
+                        alt={`Foto ${index + 2}`}
+                        className="w-full h-32 md:h-40 object-cover rounded-bl-xl"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Informações do imóvel */}
+                <div className="p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div className="flex items-center gap-2">
+                      <Bed className="w-5 h-5 text-gray-600" />
+                      <span className="text-sm font-medium">
+                        {currentProperty.bedrooms} quartos
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Bath className="w-5 h-5 text-gray-600" />
+                      <span className="text-sm font-medium">
+                        {currentProperty.bathrooms} banheiros
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Square className="w-5 h-5 text-gray-600" />
+                      <span className="text-sm font-medium">
+                        {currentProperty.area}m²
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Car className="w-5 h-5 text-gray-600" />
+                      <span className="text-sm font-medium">
+                        {currentProperty.garages} vaga
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Mapa */}
+                  <div className="bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4">
+                    <div className="text-center text-gray-600">
+                      <MapPin className="w-8 h-8 mx-auto mb-2" />
+                      <p className="text-sm">Localização exata</p>
+                      <p className="text-xs">Disponível após interesse</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Ações principais */}
+          <div className="space-y-4">
+            {/* Ações principais */}
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg mb-4">Ações rápidas</h3>
+
+                <div className="space-y-3">
+                  {/* Agendar visita */}
+                  <div className="space-y-2">
+                    <Button
+                      onClick={() => handleScheduleVisit("presencial")}
+                      className="w-full bg-homeflip-purple hover:bg-homeflip-purple/90"
+                      size="lg"
+                    >
+                      <Calendar className="w-5 h-5 mr-2" />
+                      Agendar visita presencial
+                    </Button>
+
+                    <Button
+                      onClick={() => handleScheduleVisit("video")}
+                      variant="outline"
+                      className="w-full"
+                      size="lg"
+                    >
+                      <Video className="w-5 h-5 mr-2" />
+                      Visita por vídeo
+                    </Button>
+                  </div>
+
+                  <Separator />
+
+                  {/* Chamar especialista */}
+                  <Button
+                    onClick={handleContactSpecialist}
+                    variant="outline"
+                    className="w-full"
+                    size="lg"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Chamar especialista HomeFlip
+                  </Button>
+
+                  <Separator />
+
+                  {/* Enviar proposta */}
+                  <Button
+                    onClick={handleSendProposal}
+                    className="w-full bg-homeflip-green hover:bg-homeflip-green/90 text-white"
+                    size="lg"
+                  >
+                    <HandHeart className="w-5 h-5 mr-2" />
+                    Enviar proposta em 2 cliques
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Garantia HomeFlip */}
+            <Card className="bg-gradient-to-br from-homeflip-gradient-from to-homeflip-gradient-to border-homeflip-purple/20">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-homeflip-purple/10 rounded-lg">
+                    <Shield className="w-5 h-5 text-homeflip-purple" />
+                  </div>
+                  <h3 className="font-semibold text-lg">Garantia HomeFlip</h3>
+                </div>
+
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-homeflip-purple rounded-full"></div>
+                    <span>Sem fiador</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-homeflip-purple rounded-full"></div>
+                    <span>Sem caução</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-homeflip-purple rounded-full"></div>
+                    <span>Proteção para ambas as partes</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Informações do proprietário */}
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-gray-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Maria Silva</h4>
+                    <div className="flex items-center gap-1 text-sm text-gray-600">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <span>4.8 (23 avaliações)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Clock className="w-4 h-4" />
+                  <span>Responde em até 2 horas</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Visualizações recentes */}
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                  <Eye className="w-4 h-4" />
+                  <span>Interesse recente</span>
+                </div>
+
+                <div className="text-sm text-gray-600">
+                  <div className="mb-1">18 pessoas visualizaram hoje</div>
+                  <div>3 propostas enviadas esta semana</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
